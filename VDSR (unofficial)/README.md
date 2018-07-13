@@ -1,1 +1,0 @@
-Converted from [caffe-vdsr](https://github.com/huangzehao/caffe-vdsr/tree/5a839232d179c10736ed94e7142068b168b61cf6)

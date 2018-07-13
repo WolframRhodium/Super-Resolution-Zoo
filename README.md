@@ -1,2 +1,2 @@
 # Super-Resolution-Zoo
-Collections of super resolution models in MXNet.
+Collection of super resolution models in MXNet.
