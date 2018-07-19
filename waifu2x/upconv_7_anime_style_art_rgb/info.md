@@ -1,16 +1,16 @@
 ```python
 # scale2.0x_model
-sr_args = dict(up_scale=2, is_rgb_model=True, pad=(7,7,7,7), crop=None, pre_upscale=False, merge_source=False, is_caffe_model=True, normalize_mean=None, normalize_std=None)
+sr_args = dict(up_scale=2, is_rgb_model=True, pad=(7,7,7,7), crop=None, pre_upscale=False, merge_source=False, is_caffe_model=True, normalize_mean=None, normalize_std=None, dynamic_range=1)
 
 # noise0_scale2.0x_model
-sr_args = dict(up_scale=2, is_rgb_model=True, pad=(7,7,7,7), crop=None, pre_upscale=False, merge_source=False, is_caffe_model=True, normalize_mean=None, normalize_std=None)
+sr_args = dict(up_scale=2, is_rgb_model=True, pad=(7,7,7,7), crop=None, pre_upscale=False, merge_source=False, is_caffe_model=True, normalize_mean=None, normalize_std=None, dynamic_range=1)
 
 # noise1_scale2.0x_model
-sr_args = dict(up_scale=2, is_rgb_model=True, pad=(7,7,7,7), crop=None, pre_upscale=False, merge_source=False, is_caffe_model=True, normalize_mean=None, normalize_std=None)
+sr_args = dict(up_scale=2, is_rgb_model=True, pad=(7,7,7,7), crop=None, pre_upscale=False, merge_source=False, is_caffe_model=True, normalize_mean=None, normalize_std=None, dynamic_range=1)
 
 # noise2_scale2.0x_model
-sr_args = dict(up_scale=2, is_rgb_model=True, pad=(7,7,7,7), crop=None, pre_upscale=False, merge_source=False, is_caffe_model=True, normalize_mean=None, normalize_std=None)
+sr_args = dict(up_scale=2, is_rgb_model=True, pad=(7,7,7,7), crop=None, pre_upscale=False, merge_source=False, is_caffe_model=True, normalize_mean=None, normalize_std=None, dynamic_range=1)
 
 # noise3_scale2.0x_model
-sr_args = dict(up_scale=2, is_rgb_model=True, pad=(7,7,7,7), crop=None, pre_upscale=False, merge_source=False, is_caffe_model=True, normalize_mean=None, normalize_std=None)
+sr_args = dict(up_scale=2, is_rgb_model=True, pad=(7,7,7,7), crop=None, pre_upscale=False, merge_source=False, is_caffe_model=True, normalize_mean=None, normalize_std=None, dynamic_range=1)
 ```
