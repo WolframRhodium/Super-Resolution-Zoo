@@ -1,0 +1,4035 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad0", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 4, 4, 4, 4)"
+      }, 
+      "inputs": [[0, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad1", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[1, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_0", 
+      "attrs": {"__shape__": "(64, 3, 9, 9)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_1", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution0", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(9, 9)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[2, 0, 0], [3, 0, 0], [4, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_2", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu0", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[5, 0, 0], [6, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad2", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[7, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad3", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[8, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_3", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_4", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[9, 0, 0], [10, 0, 0], [11, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_5", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_6", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_7", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_8", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm0", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[12, 0, 0], [13, 0, 0], [14, 0, 0], [15, 0, 1], [16, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_9", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu1", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[17, 0, 0], [18, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad4", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[19, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad5", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[20, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_10", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_11", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[21, 0, 0], [22, 0, 0], [23, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_12", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_13", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_14", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_15", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm1", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[24, 0, 0], [25, 0, 0], [26, 0, 0], [27, 0, 1], [28, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add0", 
+      "inputs": [[7, 0, 0], [29, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad6", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[30, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad7", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[31, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_16", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_17", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution3", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[32, 0, 0], [33, 0, 0], [34, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_18", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_19", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_20", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_21", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm2", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[35, 0, 0], [36, 0, 0], [37, 0, 0], [38, 0, 1], [39, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_22", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu2", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[40, 0, 0], [41, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad8", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[42, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad9", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[43, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_23", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_24", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution4", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[44, 0, 0], [45, 0, 0], [46, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_25", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_26", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_27", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_28", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm3", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[47, 0, 0], [48, 0, 0], [49, 0, 0], [50, 0, 1], [51, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add1", 
+      "inputs": [[30, 0, 0], [52, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad10", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[53, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad11", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[54, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_29", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_30", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution5", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[55, 0, 0], [56, 0, 0], [57, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_31", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_32", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_33", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_34", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm4", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[58, 0, 0], [59, 0, 0], [60, 0, 0], [61, 0, 1], [62, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_35", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu3", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[63, 0, 0], [64, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad12", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[65, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad13", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[66, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_36", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_37", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution6", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[67, 0, 0], [68, 0, 0], [69, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_38", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_39", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_40", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_41", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm5", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[70, 0, 0], [71, 0, 0], [72, 0, 0], [73, 0, 1], [74, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add2", 
+      "inputs": [[53, 0, 0], [75, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad14", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[76, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad15", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[77, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_42", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_43", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution7", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[78, 0, 0], [79, 0, 0], [80, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_44", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_45", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_46", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_47", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm6", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[81, 0, 0], [82, 0, 0], [83, 0, 0], [84, 0, 1], [85, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_48", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu4", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[86, 0, 0], [87, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad16", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[88, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad17", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[89, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_49", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_50", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution8", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[90, 0, 0], [91, 0, 0], [92, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_51", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_52", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_53", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_54", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm7", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[93, 0, 0], [94, 0, 0], [95, 0, 0], [96, 0, 1], [97, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add3", 
+      "inputs": [[76, 0, 0], [98, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad18", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[99, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad19", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[100, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_55", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_56", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution9", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[101, 0, 0], [102, 0, 0], [103, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_57", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_58", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_59", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_60", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm8", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[104, 0, 0], [105, 0, 0], [106, 0, 0], [107, 0, 1], [108, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_61", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu5", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[109, 0, 0], [110, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad20", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[111, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad21", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[112, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_62", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_63", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution10", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[113, 0, 0], [114, 0, 0], [115, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_64", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_65", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_66", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_67", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm9", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[116, 0, 0], [117, 0, 0], [118, 0, 0], [119, 0, 1], [120, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add4", 
+      "inputs": [[99, 0, 0], [121, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad22", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[122, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad23", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[123, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_68", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_69", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution11", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[124, 0, 0], [125, 0, 0], [126, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_70", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_71", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_72", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_73", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm10", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[127, 0, 0], [128, 0, 0], [129, 0, 0], [130, 0, 1], [131, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_74", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu6", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[132, 0, 0], [133, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad24", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[134, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad25", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[135, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_75", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_76", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution12", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[136, 0, 0], [137, 0, 0], [138, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_77", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_78", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_79", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_80", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm11", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[139, 0, 0], [140, 0, 0], [141, 0, 0], [142, 0, 1], [143, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add5", 
+      "inputs": [[122, 0, 0], [144, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad26", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[145, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad27", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[146, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_81", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_82", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution13", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[147, 0, 0], [148, 0, 0], [149, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_83", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_84", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_85", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_86", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm12", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[150, 0, 0], [151, 0, 0], [152, 0, 0], [153, 0, 1], [154, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_87", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu7", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[155, 0, 0], [156, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad28", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[157, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad29", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[158, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_88", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_89", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution14", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[159, 0, 0], [160, 0, 0], [161, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_90", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_91", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_92", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_93", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm13", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[162, 0, 0], [163, 0, 0], [164, 0, 0], [165, 0, 1], [166, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add6", 
+      "inputs": [[145, 0, 0], [167, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad30", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[168, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad31", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[169, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_94", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_95", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution15", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[170, 0, 0], [171, 0, 0], [172, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_96", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_97", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_98", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_99", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm14", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[173, 0, 0], [174, 0, 0], [175, 0, 0], [176, 0, 1], [177, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_100", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu8", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[178, 0, 0], [179, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad32", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[180, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad33", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[181, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_101", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_102", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution16", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[182, 0, 0], [183, 0, 0], [184, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_103", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_104", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_105", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_106", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm15", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[185, 0, 0], [186, 0, 0], [187, 0, 0], [188, 0, 1], [189, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add7", 
+      "inputs": [[168, 0, 0], [190, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad34", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[191, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad35", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[192, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_107", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_108", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution17", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[193, 0, 0], [194, 0, 0], [195, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_109", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_110", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_111", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_112", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm16", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[196, 0, 0], [197, 0, 0], [198, 0, 0], [199, 0, 1], [200, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_113", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu9", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[201, 0, 0], [202, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad36", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[203, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad37", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[204, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_114", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_115", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution18", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[205, 0, 0], [206, 0, 0], [207, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_116", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_117", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_118", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_119", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm17", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[208, 0, 0], [209, 0, 0], [210, 0, 0], [211, 0, 1], [212, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add8", 
+      "inputs": [[191, 0, 0], [213, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad38", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[214, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad39", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[215, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_120", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_121", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution19", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[216, 0, 0], [217, 0, 0], [218, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_122", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_123", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_124", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_125", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm18", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[219, 0, 0], [220, 0, 0], [221, 0, 0], [222, 0, 1], [223, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_126", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu10", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[224, 0, 0], [225, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad40", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[226, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad41", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[227, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_127", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_128", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution20", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[228, 0, 0], [229, 0, 0], [230, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_129", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_130", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_131", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_132", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm19", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[231, 0, 0], [232, 0, 0], [233, 0, 0], [234, 0, 1], [235, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add9", 
+      "inputs": [[214, 0, 0], [236, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad42", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[237, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad43", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[238, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_133", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_134", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution21", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[239, 0, 0], [240, 0, 0], [241, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_135", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_136", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_137", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_138", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm20", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[242, 0, 0], [243, 0, 0], [244, 0, 0], [245, 0, 1], [246, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_139", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu11", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[247, 0, 0], [248, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad44", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[249, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad45", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[250, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_140", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_141", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution22", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[251, 0, 0], [252, 0, 0], [253, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_142", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_143", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_144", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_145", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm21", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[254, 0, 0], [255, 0, 0], [256, 0, 0], [257, 0, 1], [258, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add10", 
+      "inputs": [[237, 0, 0], [259, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad46", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[260, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad47", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[261, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_146", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_147", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution23", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[262, 0, 0], [263, 0, 0], [264, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_148", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_149", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_150", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_151", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm22", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[265, 0, 0], [266, 0, 0], [267, 0, 0], [268, 0, 1], [269, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_152", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu12", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[270, 0, 0], [271, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad48", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[272, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad49", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[273, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_153", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_154", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution24", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[274, 0, 0], [275, 0, 0], [276, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_155", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_156", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_157", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_158", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm23", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[277, 0, 0], [278, 0, 0], [279, 0, 0], [280, 0, 1], [281, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add11", 
+      "inputs": [[260, 0, 0], [282, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad50", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[283, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad51", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[284, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_159", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_160", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution25", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[285, 0, 0], [286, 0, 0], [287, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_161", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_162", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_163", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_164", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm24", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[288, 0, 0], [289, 0, 0], [290, 0, 0], [291, 0, 1], [292, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_165", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu13", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[293, 0, 0], [294, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad52", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[295, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad53", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[296, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_166", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_167", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution26", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[297, 0, 0], [298, 0, 0], [299, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_168", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_169", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_170", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_171", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm25", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[300, 0, 0], [301, 0, 0], [302, 0, 0], [303, 0, 1], [304, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add12", 
+      "inputs": [[283, 0, 0], [305, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad54", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[306, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad55", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[307, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_172", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_173", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution27", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[308, 0, 0], [309, 0, 0], [310, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_174", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_175", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_176", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_177", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm26", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[311, 0, 0], [312, 0, 0], [313, 0, 0], [314, 0, 1], [315, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_178", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu14", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[316, 0, 0], [317, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad56", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[318, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad57", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[319, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_179", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_180", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution28", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[320, 0, 0], [321, 0, 0], [322, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_181", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_182", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_183", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_184", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm27", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[323, 0, 0], [324, 0, 0], [325, 0, 0], [326, 0, 1], [327, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add13", 
+      "inputs": [[306, 0, 0], [328, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad58", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[329, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad59", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[330, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_185", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_186", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution29", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[331, 0, 0], [332, 0, 0], [333, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_187", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_188", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_189", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_190", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm28", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[334, 0, 0], [335, 0, 0], [336, 0, 0], [337, 0, 1], [338, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_191", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu15", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[339, 0, 0], [340, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad60", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[341, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad61", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[342, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_192", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_193", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution30", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[343, 0, 0], [344, 0, 0], [345, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_194", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_195", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_196", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_197", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm29", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[346, 0, 0], [347, 0, 0], [348, 0, 0], [349, 0, 1], [350, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add14", 
+      "inputs": [[329, 0, 0], [351, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad62", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[352, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad63", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[353, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_198", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_199", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution31", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[354, 0, 0], [355, 0, 0], [356, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_200", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_201", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_202", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_203", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm30", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[357, 0, 0], [358, 0, 0], [359, 0, 0], [360, 0, 1], [361, 0, 1]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_204", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu16", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[362, 0, 0], [363, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad64", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[364, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad65", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[365, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_205", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_206", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution32", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[366, 0, 0], [367, 0, 0], [368, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_207", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_208", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_209", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_210", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm31", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[369, 0, 0], [370, 0, 0], [371, 0, 0], [372, 0, 1], [373, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add15", 
+      "inputs": [[352, 0, 0], [374, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad66", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[375, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad67", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[376, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_211", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_212", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution33", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[377, 0, 0], [378, 0, 0], [379, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_213", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_214", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_215", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_216", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm32", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[380, 0, 0], [381, 0, 0], [382, 0, 0], [383, 0, 1], [384, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add16", 
+      "inputs": [[7, 0, 0], [385, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad68", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[386, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad69", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[387, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_217", 
+      "attrs": {"__shape__": "(256, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_218", 
+      "attrs": {"__shape__": "(256,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution34", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "256", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[388, 0, 0], [389, 0, 0], [390, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_219", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu17", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[391, 0, 0], [392, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape0", 
+      "attrs": {"shape": "(0, -4, -1, 4, 0, 0)"}, 
+      "inputs": [[393, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape1", 
+      "attrs": {"shape": "(0, 0, -4, 2, 2, 0, 0)"}, 
+      "inputs": [[394, 0, 0]]
+    }, 
+    {
+      "op": "transpose", 
+      "name": "transpose0", 
+      "attrs": {"axes": "(0, 1, 4, 2, 5, 3)"}, 
+      "inputs": [[395, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape2", 
+      "attrs": {"shape": "(0, 0, -3, -3)"}, 
+      "inputs": [[396, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad70", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[397, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_220", 
+      "attrs": {"__shape__": "(256, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_221", 
+      "attrs": {"__shape__": "(256,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution35", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "256", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[398, 0, 0], [399, 0, 0], [400, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_222", 
+      "attrs": {
+        "__init__": "[\"Constant\", {\"value\": 0.25}]", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu18", 
+      "attrs": {"act_type": "prelu"}, 
+      "inputs": [[401, 0, 0], [402, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape3", 
+      "attrs": {"shape": "(0, -4, -1, 4, 0, 0)"}, 
+      "inputs": [[403, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape4", 
+      "attrs": {"shape": "(0, 0, -4, 2, 2, 0, 0)"}, 
+      "inputs": [[404, 0, 0]]
+    }, 
+    {
+      "op": "transpose", 
+      "name": "transpose1", 
+      "attrs": {"axes": "(0, 1, 4, 2, 5, 3)"}, 
+      "inputs": [[405, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape5", 
+      "attrs": {"shape": "(0, 0, -3, -3)"}, 
+      "inputs": [[406, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad71", 
+      "attrs": {
+        "constant_value": "0.0", 
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 4, 4, 4, 4)"
+      }, 
+      "inputs": [[407, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_223", 
+      "attrs": {"__shape__": "(3, 64, 9, 9)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_224", 
+      "attrs": {"__shape__": "(3,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution36", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(9, 9)", 
+        "no_bias": "False", 
+        "num_filter": "3", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[408, 0, 0], [409, 0, 0], [410, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [
+    0, 
+    3, 
+    4, 
+    6, 
+    10, 
+    11, 
+    13, 
+    14, 
+    15, 
+    16, 
+    18, 
+    22, 
+    23, 
+    25, 
+    26, 
+    27, 
+    28, 
+    33, 
+    34, 
+    36, 
+    37, 
+    38, 
+    39, 
+    41, 
+    45, 
+    46, 
+    48, 
+    49, 
+    50, 
+    51, 
+    56, 
+    57, 
+    59, 
+    60, 
+    61, 
+    62, 
+    64, 
+    68, 
+    69, 
+    71, 
+    72, 
+    73, 
+    74, 
+    79, 
+    80, 
+    82, 
+    83, 
+    84, 
+    85, 
+    87, 
+    91, 
+    92, 
+    94, 
+    95, 
+    96, 
+    97, 
+    102, 
+    103, 
+    105, 
+    106, 
+    107, 
+    108, 
+    110, 
+    114, 
+    115, 
+    117, 
+    118, 
+    119, 
+    120, 
+    125, 
+    126, 
+    128, 
+    129, 
+    130, 
+    131, 
+    133, 
+    137, 
+    138, 
+    140, 
+    141, 
+    142, 
+    143, 
+    148, 
+    149, 
+    151, 
+    152, 
+    153, 
+    154, 
+    156, 
+    160, 
+    161, 
+    163, 
+    164, 
+    165, 
+    166, 
+    171, 
+    172, 
+    174, 
+    175, 
+    176, 
+    177, 
+    179, 
+    183, 
+    184, 
+    186, 
+    187, 
+    188, 
+    189, 
+    194, 
+    195, 
+    197, 
+    198, 
+    199, 
+    200, 
+    202, 
+    206, 
+    207, 
+    209, 
+    210, 
+    211, 
+    212, 
+    217, 
+    218, 
+    220, 
+    221, 
+    222, 
+    223, 
+    225, 
+    229, 
+    230, 
+    232, 
+    233, 
+    234, 
+    235, 
+    240, 
+    241, 
+    243, 
+    244, 
+    245, 
+    246, 
+    248, 
+    252, 
+    253, 
+    255, 
+    256, 
+    257, 
+    258, 
+    263, 
+    264, 
+    266, 
+    267, 
+    268, 
+    269, 
+    271, 
+    275, 
+    276, 
+    278, 
+    279, 
+    280, 
+    281, 
+    286, 
+    287, 
+    289, 
+    290, 
+    291, 
+    292, 
+    294, 
+    298, 
+    299, 
+    301, 
+    302, 
+    303, 
+    304, 
+    309, 
+    310, 
+    312, 
+    313, 
+    314, 
+    315, 
+    317, 
+    321, 
+    322, 
+    324, 
+    325, 
+    326, 
+    327, 
+    332, 
+    333, 
+    335, 
+    336, 
+    337, 
+    338, 
+    340, 
+    344, 
+    345, 
+    347, 
+    348, 
+    349, 
+    350, 
+    355, 
+    356, 
+    358, 
+    359, 
+    360, 
+    361, 
+    363, 
+    367, 
+    368, 
+    370, 
+    371, 
+    372, 
+    373, 
+    378, 
+    379, 
+    381, 
+    382, 
+    383, 
+    384, 
+    389, 
+    390, 
+    392, 
+    399, 
+    400, 
+    402, 
+    409, 
+    410
+  ], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    11, 
+    12, 
+    13, 
+    14, 
+    15, 
+    16, 
+    17, 
+    20, 
+    21, 
+    22, 
+    23, 
+    24, 
+    25, 
+    26, 
+    27, 
+    28, 
+    29, 
+    30, 
+    31, 
+    34, 
+    35, 
+    36, 
+    37, 
+    38, 
+    39, 
+    40, 
+    41, 
+    42, 
+    43, 
+    44, 
+    47, 
+    48, 
+    49, 
+    50, 
+    51, 
+    52, 
+    53, 
+    54, 
+    55, 
+    56, 
+    57, 
+    58, 
+    61, 
+    62, 
+    63, 
+    64, 
+    65, 
+    66, 
+    67, 
+    68, 
+    69, 
+    70, 
+    71, 
+    74, 
+    75, 
+    76, 
+    77, 
+    78, 
+    79, 
+    80, 
+    81, 
+    82, 
+    83, 
+    84, 
+    85, 
+    88, 
+    89, 
+    90, 
+    91, 
+    92, 
+    93, 
+    94, 
+    95, 
+    96, 
+    97, 
+    98, 
+    101, 
+    102, 
+    103, 
+    104, 
+    105, 
+    106, 
+    107, 
+    108, 
+    109, 
+    110, 
+    111, 
+    112, 
+    115, 
+    116, 
+    117, 
+    118, 
+    119, 
+    120, 
+    121, 
+    122, 
+    123, 
+    124, 
+    125, 
+    128, 
+    129, 
+    130, 
+    131, 
+    132, 
+    133, 
+    134, 
+    135, 
+    136, 
+    137, 
+    138, 
+    139, 
+    142, 
+    143, 
+    144, 
+    145, 
+    146, 
+    147, 
+    148, 
+    149, 
+    150, 
+    151, 
+    152, 
+    155, 
+    156, 
+    157, 
+    158, 
+    159, 
+    160, 
+    161, 
+    162, 
+    163, 
+    164, 
+    165, 
+    166, 
+    169, 
+    170, 
+    171, 
+    172, 
+    173, 
+    174, 
+    175, 
+    176, 
+    177, 
+    178, 
+    179, 
+    182, 
+    183, 
+    184, 
+    185, 
+    186, 
+    187, 
+    188, 
+    189, 
+    190, 
+    191, 
+    192, 
+    193, 
+    196, 
+    197, 
+    198, 
+    199, 
+    200, 
+    201, 
+    202, 
+    203, 
+    204, 
+    205, 
+    206, 
+    209, 
+    210, 
+    211, 
+    212, 
+    213, 
+    214, 
+    215, 
+    216, 
+    217, 
+    218, 
+    219, 
+    220, 
+    223, 
+    224, 
+    225, 
+    226, 
+    227, 
+    228, 
+    229, 
+    230, 
+    231, 
+    232, 
+    233, 
+    236, 
+    237, 
+    238, 
+    239, 
+    240, 
+    241, 
+    242, 
+    243, 
+    244, 
+    245, 
+    246, 
+    247, 
+    250, 
+    251, 
+    252, 
+    253, 
+    254, 
+    255, 
+    256, 
+    257, 
+    258, 
+    259, 
+    260, 
+    263, 
+    264, 
+    265, 
+    266, 
+    267, 
+    268, 
+    269, 
+    270, 
+    271, 
+    272, 
+    273, 
+    274, 
+    277, 
+    278, 
+    279, 
+    280, 
+    281, 
+    282, 
+    283, 
+    284, 
+    285, 
+    286, 
+    287, 
+    290, 
+    291, 
+    292, 
+    293, 
+    294, 
+    295, 
+    296, 
+    297, 
+    298, 
+    299, 
+    300, 
+    301, 
+    304, 
+    305, 
+    306, 
+    307, 
+    308, 
+    309, 
+    310, 
+    311, 
+    312, 
+    313, 
+    314, 
+    317, 
+    318, 
+    319, 
+    320, 
+    321, 
+    322, 
+    323, 
+    324, 
+    325, 
+    326, 
+    327, 
+    328, 
+    331, 
+    332, 
+    333, 
+    334, 
+    335, 
+    336, 
+    337, 
+    338, 
+    339, 
+    340, 
+    341, 
+    344, 
+    345, 
+    346, 
+    347, 
+    348, 
+    349, 
+    350, 
+    351, 
+    352, 
+    353, 
+    354, 
+    355, 
+    358, 
+    359, 
+    360, 
+    361, 
+    362, 
+    363, 
+    364, 
+    365, 
+    366, 
+    367, 
+    368, 
+    371, 
+    372, 
+    373, 
+    374, 
+    375, 
+    376, 
+    377, 
+    378, 
+    379, 
+    380, 
+    381, 
+    382, 
+    385, 
+    386, 
+    387, 
+    388, 
+    389, 
+    390, 
+    391, 
+    392, 
+    393, 
+    394, 
+    395, 
+    398, 
+    399, 
+    400, 
+    401, 
+    402, 
+    403, 
+    404, 
+    405, 
+    406, 
+    407, 
+    408, 
+    409, 
+    412, 
+    413, 
+    414, 
+    415, 
+    416, 
+    417, 
+    418, 
+    419, 
+    420, 
+    421, 
+    422, 
+    425, 
+    426, 
+    427, 
+    428, 
+    429, 
+    430, 
+    431, 
+    432, 
+    433, 
+    434, 
+    435, 
+    436, 
+    439, 
+    440, 
+    441, 
+    442, 
+    443, 
+    444, 
+    445, 
+    446, 
+    447, 
+    448, 
+    449, 
+    452, 
+    453, 
+    454, 
+    455, 
+    456, 
+    457, 
+    458, 
+    459, 
+    460, 
+    461, 
+    462, 
+    463, 
+    464, 
+    465, 
+    466, 
+    467, 
+    468, 
+    469, 
+    470, 
+    471, 
+    472, 
+    473, 
+    474, 
+    475, 
+    476, 
+    477, 
+    478
+  ], 
+  "heads": [[411, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 10300]}
+}
