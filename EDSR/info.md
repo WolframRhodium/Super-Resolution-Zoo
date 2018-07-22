@@ -1,4 +1,4 @@
-**Note**: Mean subtraction (a.k.a. MeanShift) and residual scaling are excluded from the model definition.
+**Note**: Mean subtraction (a.k.a. MeanShift) and residual scaling are excluded from the model's definition.
 
 ```python
 # EDSR_baseline_2x

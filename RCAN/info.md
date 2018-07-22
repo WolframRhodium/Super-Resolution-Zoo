@@ -1,4 +1,5 @@
-**Note**: Mean subtraction (a.k.a. MeanShift) and residual scaling are excluded from the model definition.
+**Note**: Mean subtraction (a.k.a. MeanShift) and residual scaling are excluded from the model's definition.
+The output is **inconsistent** with the original model currently. I will try to fix it.
 
 ```python
 # Bicubic (BI) degradation model

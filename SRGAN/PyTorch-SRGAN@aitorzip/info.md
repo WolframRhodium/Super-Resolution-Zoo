@@ -1,4 +1,4 @@
-**Note**: Mean subtraction (a.k.a. MeanShift) is excluded from the model definition.
+**Note**: Mean subtraction (a.k.a. MeanShift) is excluded from the model's definition.
 
 ```python
 # SRGAN_4x
