@@ -2,8 +2,8 @@
 
 ```python
 # RED30_deblur_disk
-args = dict(up_scale=1, is_rgb_model=True, pad=None, crop=None, pre_upscale=False, is_caffe_model=True, normalize_mean=None, normalize_std=None, dynamic_range=1)
+args = dict(up_scale=1, is_rgb_model=True, pad=None, crop=None, pre_upscale=False)
 
 # RED30_deblur_gaussian
-args = dict(up_scale=1, is_rgb_model=True, pad=None, crop=None, pre_upscale=False, is_caffe_model=True, normalize_mean=None, normalize_std=None, dynamic_range=1)
+args = dict(up_scale=1, is_rgb_model=True, pad=None, crop=None, pre_upscale=False)
 ```
