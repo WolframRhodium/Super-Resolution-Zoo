@@ -1,5 +1,5 @@
-Converted from **official** [nmhkhn/CARN-pytorch](https://github.com/nmhkahn/CARN-pytorch/tree/1fb92291518e01d9967daa721d0c74671d039dbb).
+Converted from **official** [nmhkhn/CARN-pytorch](https://github.com/nmhkahn/CARN-pytorch/tree/a1d62d08a90cc341ea7581fec3302ebb926df7b4).
 
 ```
-[1] Ahn, N., Kang, B., & Sohn, K. A. (2018). Fast, Accurate, and, Lightweight Super-Resolution with Cascading Residual Network. arXiv preprint arXiv:1803.08664.
+[1] Ahn, N., Kang, B., & Sohn, K. A. (2018). Fast, Accurate, and, Lightweight Super-Resolution with Cascading Residual Network. In proceedings of European Conference on Computer Vision.
 ```

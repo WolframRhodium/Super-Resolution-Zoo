@@ -6,35 +6,24 @@
       "inputs": []
     }, 
     {
-      "op": "null", 
-      "name": "neg_DIV2K_mean", 
-      "attrs": {"__shape__": "(1, 3, 1, 1)"}, 
-      "inputs": []
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "pre_mean_shift", 
-      "inputs": [[0, 0, 0], [1, 0, 0]]
-    }, 
-    {
       "op": "Pad", 
       "name": "pad0", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[2, 0, 0]]
+      "inputs": [[0, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "learned_0", 
-      "attrs": {"__shape__": "(64, 3, 3, 3)"}, 
+      "attrs": {"__shape__": "(3, 3, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
       "name": "learned_1", 
-      "attrs": {"__shape__": "(64,)"}, 
+      "attrs": {"__shape__": "(3,)"}, 
       "inputs": []
     }, 
     {
@@ -42,13 +31,13 @@
       "name": "convolution0", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(3, 3)", 
+        "kernel": "(1, 1)", 
         "no_bias": "False", 
-        "num_filter": "64", 
+        "num_filter": "3", 
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[3, 0, 0], [4, 0, 0], [5, 0, 0]]
+      "inputs": [[1, 0, 0], [2, 0, 0], [3, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -57,17 +46,17 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[6, 0, 0]]
+      "inputs": [[4, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_2", 
-      "attrs": {"__shape__": "(64, 16, 3, 3)"}, 
+      "name": "learned_4", 
+      "attrs": {"__shape__": "(64, 3, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_3", 
+      "name": "learned_5", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -79,15 +68,10 @@
         "kernel": "(3, 3)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "4", 
+        "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[7, 0, 0], [8, 0, 0], [9, 0, 0]]
-    }, 
-    {
-      "op": "relu", 
-      "name": "relu0", 
-      "inputs": [[10, 0, 0]]
+      "inputs": [[5, 0, 0], [6, 0, 0], [7, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -96,17 +80,17 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[11, 0, 0]]
+      "inputs": [[8, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_4", 
+      "name": "learned_6", 
       "attrs": {"__shape__": "(64, 16, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_5", 
+      "name": "learned_7", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -121,31 +105,31 @@
         "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[12, 0, 0], [13, 0, 0], [14, 0, 0]]
+      "inputs": [[9, 0, 0], [10, 0, 0], [11, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu1", 
-      "inputs": [[15, 0, 0]]
+      "name": "relu0", 
+      "inputs": [[12, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad3", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[16, 0, 0]]
+      "inputs": [[13, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_6", 
-      "attrs": {"__shape__": "(64, 64, 1, 1)"}, 
+      "name": "learned_8", 
+      "attrs": {"__shape__": "(64, 16, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_7", 
+      "name": "learned_9", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -154,32 +138,18 @@
       "name": "convolution3", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(1, 1)", 
+        "kernel": "(3, 3)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "1", 
+        "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[17, 0, 0], [18, 0, 0], [19, 0, 0]]
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "broadcast_add0", 
-      "inputs": [[20, 0, 0], [6, 0, 0]]
+      "inputs": [[14, 0, 0], [15, 0, 0], [16, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu2", 
-      "inputs": [[21, 0, 0]]
-    }, 
-    {
-      "op": "Concat", 
-      "name": "concat0", 
-      "attrs": {
-        "dim": "1", 
-        "num_args": "2"
-      }, 
-      "inputs": [[6, 0, 0], [22, 0, 0]]
+      "name": "relu1", 
+      "inputs": [[17, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -188,17 +158,17 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[23, 0, 0]]
+      "inputs": [[18, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_8", 
-      "attrs": {"__shape__": "(64, 128, 1, 1)"}, 
+      "name": "learned_10", 
+      "attrs": {"__shape__": "(64, 64, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_9", 
+      "name": "learned_11", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -213,39 +183,65 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[24, 0, 0], [25, 0, 0], [26, 0, 0]]
+      "inputs": [[19, 0, 0], [20, 0, 0], [21, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add0", 
+      "inputs": [[22, 0, 0], [8, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu3", 
-      "inputs": [[27, 0, 0]]
+      "name": "relu2", 
+      "inputs": [[23, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat0", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[8, 0, 0], [24, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad5", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[28, 0, 0]]
+      "inputs": [[25, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_12", 
+      "attrs": {"__shape__": "(64, 128, 1, 1)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_13", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
     }, 
     {
       "op": "Convolution", 
       "name": "convolution5", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(3, 3)", 
+        "kernel": "(1, 1)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "4", 
+        "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[29, 0, 0], [8, 0, 0], [9, 0, 0]]
+      "inputs": [[26, 0, 0], [27, 0, 0], [28, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu4", 
-      "inputs": [[30, 0, 0]]
+      "name": "relu3", 
+      "inputs": [[29, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -254,7 +250,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[31, 0, 0]]
+      "inputs": [[30, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -267,53 +263,39 @@
         "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[32, 0, 0], [13, 0, 0], [14, 0, 0]]
+      "inputs": [[31, 0, 0], [10, 0, 0], [11, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu5", 
-      "inputs": [[33, 0, 0]]
+      "name": "relu4", 
+      "inputs": [[32, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad7", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[34, 0, 0]]
+      "inputs": [[33, 0, 0]]
     }, 
     {
       "op": "Convolution", 
       "name": "convolution7", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(1, 1)", 
+        "kernel": "(3, 3)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "1", 
+        "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[35, 0, 0], [18, 0, 0], [19, 0, 0]]
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "broadcast_add1", 
-      "inputs": [[36, 0, 0], [28, 0, 0]]
+      "inputs": [[34, 0, 0], [15, 0, 0], [16, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu6", 
-      "inputs": [[37, 0, 0]]
-    }, 
-    {
-      "op": "Concat", 
-      "name": "concat1", 
-      "attrs": {
-        "dim": "1", 
-        "num_args": "2"
-      }, 
-      "inputs": [[23, 0, 0], [38, 0, 0]]
+      "name": "relu5", 
+      "inputs": [[35, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -322,19 +304,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[39, 0, 0]]
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_10", 
-      "attrs": {"__shape__": "(64, 192, 1, 1)"}, 
-      "inputs": []
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_11", 
-      "attrs": {"__shape__": "(64,)"}, 
-      "inputs": []
+      "inputs": [[36, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -347,39 +317,65 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[40, 0, 0], [41, 0, 0], [42, 0, 0]]
+      "inputs": [[37, 0, 0], [20, 0, 0], [21, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add1", 
+      "inputs": [[38, 0, 0], [30, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu7", 
-      "inputs": [[43, 0, 0]]
+      "name": "relu6", 
+      "inputs": [[39, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat1", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[25, 0, 0], [40, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad9", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[44, 0, 0]]
+      "inputs": [[41, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_14", 
+      "attrs": {"__shape__": "(64, 192, 1, 1)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_15", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
     }, 
     {
       "op": "Convolution", 
       "name": "convolution9", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(3, 3)", 
+        "kernel": "(1, 1)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "4", 
+        "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[45, 0, 0], [8, 0, 0], [9, 0, 0]]
+      "inputs": [[42, 0, 0], [43, 0, 0], [44, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu8", 
-      "inputs": [[46, 0, 0]]
+      "name": "relu7", 
+      "inputs": [[45, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -388,7 +384,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[47, 0, 0]]
+      "inputs": [[46, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -401,53 +397,39 @@
         "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[48, 0, 0], [13, 0, 0], [14, 0, 0]]
+      "inputs": [[47, 0, 0], [10, 0, 0], [11, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu9", 
-      "inputs": [[49, 0, 0]]
+      "name": "relu8", 
+      "inputs": [[48, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad11", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[50, 0, 0]]
+      "inputs": [[49, 0, 0]]
     }, 
     {
       "op": "Convolution", 
       "name": "convolution11", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(1, 1)", 
+        "kernel": "(3, 3)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "1", 
+        "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[51, 0, 0], [18, 0, 0], [19, 0, 0]]
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "broadcast_add2", 
-      "inputs": [[52, 0, 0], [44, 0, 0]]
+      "inputs": [[50, 0, 0], [15, 0, 0], [16, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu10", 
-      "inputs": [[53, 0, 0]]
-    }, 
-    {
-      "op": "Concat", 
-      "name": "concat2", 
-      "attrs": {
-        "dim": "1", 
-        "num_args": "2"
-      }, 
-      "inputs": [[39, 0, 0], [54, 0, 0]]
+      "name": "relu9", 
+      "inputs": [[51, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -456,19 +438,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[55, 0, 0]]
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_12", 
-      "attrs": {"__shape__": "(64, 256, 1, 1)"}, 
-      "inputs": []
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_13", 
-      "attrs": {"__shape__": "(64,)"}, 
-      "inputs": []
+      "inputs": [[52, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -481,21 +451,26 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[56, 0, 0], [57, 0, 0], [58, 0, 0]]
+      "inputs": [[53, 0, 0], [20, 0, 0], [21, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add2", 
+      "inputs": [[54, 0, 0], [46, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu11", 
-      "inputs": [[59, 0, 0]]
+      "name": "relu10", 
+      "inputs": [[55, 0, 0]]
     }, 
     {
       "op": "Concat", 
-      "name": "concat3", 
+      "name": "concat2", 
       "attrs": {
         "dim": "1", 
         "num_args": "2"
       }, 
-      "inputs": [[6, 0, 0], [60, 0, 0]]
+      "inputs": [[41, 0, 0], [56, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -504,17 +479,17 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[61, 0, 0]]
+      "inputs": [[57, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_38", 
-      "attrs": {"__shape__": "(64, 128, 1, 1)"}, 
+      "name": "learned_16", 
+      "attrs": {"__shape__": "(64, 256, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_39", 
+      "name": "learned_17", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -529,31 +504,40 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[62, 0, 0], [63, 0, 0], [64, 0, 0]]
+      "inputs": [[58, 0, 0], [59, 0, 0], [60, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu12", 
-      "inputs": [[65, 0, 0]]
+      "name": "relu11", 
+      "inputs": [[61, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat3", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[8, 0, 0], [62, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad14", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[66, 0, 0]]
+      "inputs": [[63, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_14", 
-      "attrs": {"__shape__": "(64, 16, 3, 3)"}, 
+      "name": "learned_42", 
+      "attrs": {"__shape__": "(64, 128, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_15", 
+      "name": "learned_43", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -562,18 +546,18 @@
       "name": "convolution14", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(3, 3)", 
+        "kernel": "(1, 1)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "4", 
+        "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[67, 0, 0], [68, 0, 0], [69, 0, 0]]
+      "inputs": [[64, 0, 0], [65, 0, 0], [66, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu13", 
-      "inputs": [[70, 0, 0]]
+      "name": "relu12", 
+      "inputs": [[67, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -582,17 +566,17 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[71, 0, 0]]
+      "inputs": [[68, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_16", 
+      "name": "learned_18", 
       "attrs": {"__shape__": "(64, 16, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_17", 
+      "name": "learned_19", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -607,31 +591,31 @@
         "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[72, 0, 0], [73, 0, 0], [74, 0, 0]]
+      "inputs": [[69, 0, 0], [70, 0, 0], [71, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu14", 
-      "inputs": [[75, 0, 0]]
+      "name": "relu13", 
+      "inputs": [[72, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad16", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[76, 0, 0]]
+      "inputs": [[73, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_18", 
-      "attrs": {"__shape__": "(64, 64, 1, 1)"}, 
+      "name": "learned_20", 
+      "attrs": {"__shape__": "(64, 16, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_19", 
+      "name": "learned_21", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -640,32 +624,18 @@
       "name": "convolution16", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(1, 1)", 
+        "kernel": "(3, 3)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "1", 
+        "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[77, 0, 0], [78, 0, 0], [79, 0, 0]]
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "broadcast_add3", 
-      "inputs": [[80, 0, 0], [66, 0, 0]]
+      "inputs": [[74, 0, 0], [75, 0, 0], [76, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu15", 
-      "inputs": [[81, 0, 0]]
-    }, 
-    {
-      "op": "Concat", 
-      "name": "concat4", 
-      "attrs": {
-        "dim": "1", 
-        "num_args": "2"
-      }, 
-      "inputs": [[66, 0, 0], [82, 0, 0]]
+      "name": "relu14", 
+      "inputs": [[77, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -674,17 +644,17 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[83, 0, 0]]
+      "inputs": [[78, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_20", 
-      "attrs": {"__shape__": "(64, 128, 1, 1)"}, 
+      "name": "learned_22", 
+      "attrs": {"__shape__": "(64, 64, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_21", 
+      "name": "learned_23", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -699,39 +669,65 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[84, 0, 0], [85, 0, 0], [86, 0, 0]]
+      "inputs": [[79, 0, 0], [80, 0, 0], [81, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add3", 
+      "inputs": [[82, 0, 0], [68, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu16", 
-      "inputs": [[87, 0, 0]]
+      "name": "relu15", 
+      "inputs": [[83, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat4", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[68, 0, 0], [84, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad18", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[88, 0, 0]]
+      "inputs": [[85, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_24", 
+      "attrs": {"__shape__": "(64, 128, 1, 1)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_25", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
     }, 
     {
       "op": "Convolution", 
       "name": "convolution18", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(3, 3)", 
+        "kernel": "(1, 1)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "4", 
+        "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[89, 0, 0], [68, 0, 0], [69, 0, 0]]
+      "inputs": [[86, 0, 0], [87, 0, 0], [88, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu17", 
-      "inputs": [[90, 0, 0]]
+      "name": "relu16", 
+      "inputs": [[89, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -740,7 +736,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[91, 0, 0]]
+      "inputs": [[90, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -753,53 +749,39 @@
         "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[92, 0, 0], [73, 0, 0], [74, 0, 0]]
+      "inputs": [[91, 0, 0], [70, 0, 0], [71, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu18", 
-      "inputs": [[93, 0, 0]]
+      "name": "relu17", 
+      "inputs": [[92, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad20", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[94, 0, 0]]
+      "inputs": [[93, 0, 0]]
     }, 
     {
       "op": "Convolution", 
       "name": "convolution20", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(1, 1)", 
+        "kernel": "(3, 3)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "1", 
+        "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[95, 0, 0], [78, 0, 0], [79, 0, 0]]
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "broadcast_add4", 
-      "inputs": [[96, 0, 0], [88, 0, 0]]
+      "inputs": [[94, 0, 0], [75, 0, 0], [76, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu19", 
-      "inputs": [[97, 0, 0]]
-    }, 
-    {
-      "op": "Concat", 
-      "name": "concat5", 
-      "attrs": {
-        "dim": "1", 
-        "num_args": "2"
-      }, 
-      "inputs": [[83, 0, 0], [98, 0, 0]]
+      "name": "relu18", 
+      "inputs": [[95, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -808,19 +790,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[99, 0, 0]]
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_22", 
-      "attrs": {"__shape__": "(64, 192, 1, 1)"}, 
-      "inputs": []
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_23", 
-      "attrs": {"__shape__": "(64,)"}, 
-      "inputs": []
+      "inputs": [[96, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -833,39 +803,65 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[100, 0, 0], [101, 0, 0], [102, 0, 0]]
+      "inputs": [[97, 0, 0], [80, 0, 0], [81, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add4", 
+      "inputs": [[98, 0, 0], [90, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu20", 
-      "inputs": [[103, 0, 0]]
+      "name": "relu19", 
+      "inputs": [[99, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat5", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[85, 0, 0], [100, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad22", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[104, 0, 0]]
+      "inputs": [[101, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_26", 
+      "attrs": {"__shape__": "(64, 192, 1, 1)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_27", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
     }, 
     {
       "op": "Convolution", 
       "name": "convolution22", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(3, 3)", 
+        "kernel": "(1, 1)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "4", 
+        "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[105, 0, 0], [68, 0, 0], [69, 0, 0]]
+      "inputs": [[102, 0, 0], [103, 0, 0], [104, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu21", 
-      "inputs": [[106, 0, 0]]
+      "name": "relu20", 
+      "inputs": [[105, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -874,7 +870,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[107, 0, 0]]
+      "inputs": [[106, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -887,53 +883,39 @@
         "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[108, 0, 0], [73, 0, 0], [74, 0, 0]]
+      "inputs": [[107, 0, 0], [70, 0, 0], [71, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu22", 
-      "inputs": [[109, 0, 0]]
+      "name": "relu21", 
+      "inputs": [[108, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad24", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[110, 0, 0]]
+      "inputs": [[109, 0, 0]]
     }, 
     {
       "op": "Convolution", 
       "name": "convolution24", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(1, 1)", 
+        "kernel": "(3, 3)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "1", 
+        "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[111, 0, 0], [78, 0, 0], [79, 0, 0]]
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "broadcast_add5", 
-      "inputs": [[112, 0, 0], [104, 0, 0]]
+      "inputs": [[110, 0, 0], [75, 0, 0], [76, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu23", 
-      "inputs": [[113, 0, 0]]
-    }, 
-    {
-      "op": "Concat", 
-      "name": "concat6", 
-      "attrs": {
-        "dim": "1", 
-        "num_args": "2"
-      }, 
-      "inputs": [[99, 0, 0], [114, 0, 0]]
+      "name": "relu22", 
+      "inputs": [[111, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -942,19 +924,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[115, 0, 0]]
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_24", 
-      "attrs": {"__shape__": "(64, 256, 1, 1)"}, 
-      "inputs": []
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_25", 
-      "attrs": {"__shape__": "(64,)"}, 
-      "inputs": []
+      "inputs": [[112, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -967,21 +937,26 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[116, 0, 0], [117, 0, 0], [118, 0, 0]]
+      "inputs": [[113, 0, 0], [80, 0, 0], [81, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add5", 
+      "inputs": [[114, 0, 0], [106, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu24", 
-      "inputs": [[119, 0, 0]]
+      "name": "relu23", 
+      "inputs": [[115, 0, 0]]
     }, 
     {
       "op": "Concat", 
-      "name": "concat7", 
+      "name": "concat6", 
       "attrs": {
         "dim": "1", 
         "num_args": "2"
       }, 
-      "inputs": [[61, 0, 0], [120, 0, 0]]
+      "inputs": [[101, 0, 0], [116, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -990,17 +965,17 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[121, 0, 0]]
+      "inputs": [[117, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_40", 
-      "attrs": {"__shape__": "(64, 192, 1, 1)"}, 
+      "name": "learned_28", 
+      "attrs": {"__shape__": "(64, 256, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_41", 
+      "name": "learned_29", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1015,31 +990,40 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[122, 0, 0], [123, 0, 0], [124, 0, 0]]
+      "inputs": [[118, 0, 0], [119, 0, 0], [120, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu25", 
-      "inputs": [[125, 0, 0]]
+      "name": "relu24", 
+      "inputs": [[121, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat7", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[63, 0, 0], [122, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad27", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[126, 0, 0]]
+      "inputs": [[123, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_26", 
-      "attrs": {"__shape__": "(64, 16, 3, 3)"}, 
+      "name": "learned_44", 
+      "attrs": {"__shape__": "(64, 192, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_27", 
+      "name": "learned_45", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1048,18 +1032,18 @@
       "name": "convolution27", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(3, 3)", 
+        "kernel": "(1, 1)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "4", 
+        "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[127, 0, 0], [128, 0, 0], [129, 0, 0]]
+      "inputs": [[124, 0, 0], [125, 0, 0], [126, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu26", 
-      "inputs": [[130, 0, 0]]
+      "name": "relu25", 
+      "inputs": [[127, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -1068,17 +1052,17 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[131, 0, 0]]
+      "inputs": [[128, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_28", 
+      "name": "learned_30", 
       "attrs": {"__shape__": "(64, 16, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_29", 
+      "name": "learned_31", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1093,31 +1077,31 @@
         "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[132, 0, 0], [133, 0, 0], [134, 0, 0]]
+      "inputs": [[129, 0, 0], [130, 0, 0], [131, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu27", 
-      "inputs": [[135, 0, 0]]
+      "name": "relu26", 
+      "inputs": [[132, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad29", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[136, 0, 0]]
+      "inputs": [[133, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_30", 
-      "attrs": {"__shape__": "(64, 64, 1, 1)"}, 
+      "name": "learned_32", 
+      "attrs": {"__shape__": "(64, 16, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_31", 
+      "name": "learned_33", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1126,32 +1110,18 @@
       "name": "convolution29", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(1, 1)", 
+        "kernel": "(3, 3)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "1", 
+        "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[137, 0, 0], [138, 0, 0], [139, 0, 0]]
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "broadcast_add6", 
-      "inputs": [[140, 0, 0], [126, 0, 0]]
+      "inputs": [[134, 0, 0], [135, 0, 0], [136, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu28", 
-      "inputs": [[141, 0, 0]]
-    }, 
-    {
-      "op": "Concat", 
-      "name": "concat8", 
-      "attrs": {
-        "dim": "1", 
-        "num_args": "2"
-      }, 
-      "inputs": [[126, 0, 0], [142, 0, 0]]
+      "name": "relu27", 
+      "inputs": [[137, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -1160,17 +1130,17 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[143, 0, 0]]
+      "inputs": [[138, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_32", 
-      "attrs": {"__shape__": "(64, 128, 1, 1)"}, 
+      "name": "learned_34", 
+      "attrs": {"__shape__": "(64, 64, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_33", 
+      "name": "learned_35", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1185,39 +1155,65 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[144, 0, 0], [145, 0, 0], [146, 0, 0]]
+      "inputs": [[139, 0, 0], [140, 0, 0], [141, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add6", 
+      "inputs": [[142, 0, 0], [128, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu29", 
-      "inputs": [[147, 0, 0]]
+      "name": "relu28", 
+      "inputs": [[143, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat8", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[128, 0, 0], [144, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad31", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[148, 0, 0]]
+      "inputs": [[145, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_36", 
+      "attrs": {"__shape__": "(64, 128, 1, 1)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_37", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
     }, 
     {
       "op": "Convolution", 
       "name": "convolution31", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(3, 3)", 
+        "kernel": "(1, 1)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "4", 
+        "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[149, 0, 0], [128, 0, 0], [129, 0, 0]]
+      "inputs": [[146, 0, 0], [147, 0, 0], [148, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu30", 
-      "inputs": [[150, 0, 0]]
+      "name": "relu29", 
+      "inputs": [[149, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -1226,7 +1222,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[151, 0, 0]]
+      "inputs": [[150, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -1239,53 +1235,39 @@
         "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[152, 0, 0], [133, 0, 0], [134, 0, 0]]
+      "inputs": [[151, 0, 0], [130, 0, 0], [131, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu31", 
-      "inputs": [[153, 0, 0]]
+      "name": "relu30", 
+      "inputs": [[152, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad33", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[154, 0, 0]]
+      "inputs": [[153, 0, 0]]
     }, 
     {
       "op": "Convolution", 
       "name": "convolution33", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(1, 1)", 
+        "kernel": "(3, 3)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "1", 
+        "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[155, 0, 0], [138, 0, 0], [139, 0, 0]]
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "broadcast_add7", 
-      "inputs": [[156, 0, 0], [148, 0, 0]]
+      "inputs": [[154, 0, 0], [135, 0, 0], [136, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu32", 
-      "inputs": [[157, 0, 0]]
-    }, 
-    {
-      "op": "Concat", 
-      "name": "concat9", 
-      "attrs": {
-        "dim": "1", 
-        "num_args": "2"
-      }, 
-      "inputs": [[143, 0, 0], [158, 0, 0]]
+      "name": "relu31", 
+      "inputs": [[155, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -1294,19 +1276,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[159, 0, 0]]
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_34", 
-      "attrs": {"__shape__": "(64, 192, 1, 1)"}, 
-      "inputs": []
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_35", 
-      "attrs": {"__shape__": "(64,)"}, 
-      "inputs": []
+      "inputs": [[156, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -1319,39 +1289,65 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[160, 0, 0], [161, 0, 0], [162, 0, 0]]
+      "inputs": [[157, 0, 0], [140, 0, 0], [141, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add7", 
+      "inputs": [[158, 0, 0], [150, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu33", 
-      "inputs": [[163, 0, 0]]
+      "name": "relu32", 
+      "inputs": [[159, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat9", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[145, 0, 0], [160, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad35", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[164, 0, 0]]
+      "inputs": [[161, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_38", 
+      "attrs": {"__shape__": "(64, 192, 1, 1)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_39", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
     }, 
     {
       "op": "Convolution", 
       "name": "convolution35", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(3, 3)", 
+        "kernel": "(1, 1)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "4", 
+        "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[165, 0, 0], [128, 0, 0], [129, 0, 0]]
+      "inputs": [[162, 0, 0], [163, 0, 0], [164, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu34", 
-      "inputs": [[166, 0, 0]]
+      "name": "relu33", 
+      "inputs": [[165, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -1360,7 +1356,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[167, 0, 0]]
+      "inputs": [[166, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -1373,53 +1369,39 @@
         "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[168, 0, 0], [133, 0, 0], [134, 0, 0]]
+      "inputs": [[167, 0, 0], [130, 0, 0], [131, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu35", 
-      "inputs": [[169, 0, 0]]
+      "name": "relu34", 
+      "inputs": [[168, 0, 0]]
     }, 
     {
       "op": "Pad", 
       "name": "pad37", 
       "attrs": {
         "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
       }, 
-      "inputs": [[170, 0, 0]]
+      "inputs": [[169, 0, 0]]
     }, 
     {
       "op": "Convolution", 
       "name": "convolution37", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(1, 1)", 
+        "kernel": "(3, 3)", 
         "no_bias": "False", 
         "num_filter": "64", 
-        "num_group": "1", 
+        "num_group": "4", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[171, 0, 0], [138, 0, 0], [139, 0, 0]]
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "broadcast_add8", 
-      "inputs": [[172, 0, 0], [164, 0, 0]]
+      "inputs": [[170, 0, 0], [135, 0, 0], [136, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu36", 
-      "inputs": [[173, 0, 0]]
-    }, 
-    {
-      "op": "Concat", 
-      "name": "concat10", 
-      "attrs": {
-        "dim": "1", 
-        "num_args": "2"
-      }, 
-      "inputs": [[159, 0, 0], [174, 0, 0]]
+      "name": "relu35", 
+      "inputs": [[171, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -1428,19 +1410,7 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[175, 0, 0]]
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_36", 
-      "attrs": {"__shape__": "(64, 256, 1, 1)"}, 
-      "inputs": []
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_37", 
-      "attrs": {"__shape__": "(64,)"}, 
-      "inputs": []
+      "inputs": [[172, 0, 0]]
     }, 
     {
       "op": "Convolution", 
@@ -1453,21 +1423,26 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[176, 0, 0], [177, 0, 0], [178, 0, 0]]
+      "inputs": [[173, 0, 0], [140, 0, 0], [141, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add8", 
+      "inputs": [[174, 0, 0], [166, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu37", 
-      "inputs": [[179, 0, 0]]
+      "name": "relu36", 
+      "inputs": [[175, 0, 0]]
     }, 
     {
       "op": "Concat", 
-      "name": "concat11", 
+      "name": "concat10", 
       "attrs": {
         "dim": "1", 
         "num_args": "2"
       }, 
-      "inputs": [[121, 0, 0], [180, 0, 0]]
+      "inputs": [[161, 0, 0], [176, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -1476,17 +1451,17 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[181, 0, 0]]
+      "inputs": [[177, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_42", 
+      "name": "learned_40", 
       "attrs": {"__shape__": "(64, 256, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_43", 
+      "name": "learned_41", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1501,12 +1476,21 @@
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[182, 0, 0], [183, 0, 0], [184, 0, 0]]
+      "inputs": [[178, 0, 0], [179, 0, 0], [180, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu38", 
-      "inputs": [[185, 0, 0]]
+      "name": "relu37", 
+      "inputs": [[181, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat11", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[123, 0, 0], [182, 0, 0]]
     }, 
     {
       "op": "Pad", 
@@ -1515,18 +1499,18 @@
         "mode": "constant", 
         "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
       }, 
-      "inputs": [[186, 0, 0]]
+      "inputs": [[183, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_44", 
-      "attrs": {"__shape__": "(256, 64, 1, 1)"}, 
+      "name": "learned_46", 
+      "attrs": {"__shape__": "(64, 256, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_45", 
-      "attrs": {"__shape__": "(256,)"}, 
+      "name": "learned_47", 
+      "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
     {
@@ -1536,51 +1520,36 @@
         "dilate": "(1, 1)", 
         "kernel": "(1, 1)", 
         "no_bias": "False", 
-        "num_filter": "256", 
+        "num_filter": "64", 
         "num_group": "1", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[187, 0, 0], [188, 0, 0], [189, 0, 0]]
+      "inputs": [[184, 0, 0], [185, 0, 0], [186, 0, 0]]
     }, 
     {
       "op": "relu", 
-      "name": "relu39", 
-      "inputs": [[190, 0, 0]]
+      "name": "relu38", 
+      "inputs": [[187, 0, 0]]
     }, 
     {
-      "op": "Reshape", 
-      "name": "reshape0", 
-      "attrs": {"shape": "(0, -4, -1, 4, 0, 0)"}, 
-      "inputs": [[191, 0, 0]]
-    }, 
-    {
-      "op": "Reshape", 
-      "name": "reshape1", 
-      "attrs": {"shape": "(0, 0, -4, 2, 2, 0, 0)"}, 
-      "inputs": [[192, 0, 0]]
-    }, 
-    {
-      "op": "transpose", 
-      "name": "transpose0", 
-      "attrs": {"axes": "(0, 1, 4, 2, 5, 3)"}, 
-      "inputs": [[193, 0, 0]]
-    }, 
-    {
-      "op": "Reshape", 
-      "name": "reshape2", 
-      "attrs": {"shape": "(0, 0, -3, -3)"}, 
-      "inputs": [[194, 0, 0]]
+      "op": "Pad", 
+      "name": "pad41", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[188, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_52", 
-      "attrs": {"__shape__": "(3, 64, 3, 3)"}, 
+      "name": "learned_48", 
+      "attrs": {"__shape__": "(256, 16, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_53", 
-      "attrs": {"__shape__": "(3,)"}, 
+      "name": "learned_49", 
+      "attrs": {"__shape__": "(256,)"}, 
       "inputs": []
     }, 
     {
@@ -1590,77 +1559,156 @@
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
         "no_bias": "False", 
+        "num_filter": "256", 
+        "num_group": "4", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[189, 0, 0], [190, 0, 0], [191, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu39", 
+      "inputs": [[192, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape0", 
+      "attrs": {"shape": "(0, -4, -1, 4, 0, 0)"}, 
+      "inputs": [[193, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape1", 
+      "attrs": {"shape": "(0, 0, -4, 2, 2, 0, 0)"}, 
+      "inputs": [[194, 0, 0]]
+    }, 
+    {
+      "op": "transpose", 
+      "name": "transpose0", 
+      "attrs": {"axes": "(0, 1, 4, 2, 5, 3)"}, 
+      "inputs": [[195, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape2", 
+      "attrs": {"shape": "(0, 0, -3, -3)"}, 
+      "inputs": [[196, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_56", 
+      "attrs": {"__shape__": "(3, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_57", 
+      "attrs": {"__shape__": "(3,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution42", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
         "num_filter": "3", 
         "num_group": "1", 
         "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[195, 0, 0], [196, 0, 0], [197, 0, 0]]
+      "inputs": [[197, 0, 0], [198, 0, 0], [199, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad42", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 0, 0)"
+      }, 
+      "inputs": [[200, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "DIV2K_mean", 
-      "attrs": {"__shape__": "(1, 3, 1, 1)"}, 
+      "name": "learned_2", 
+      "attrs": {"__shape__": "(3, 3, 1, 1)"}, 
       "inputs": []
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "post_mean_shift", 
-      "inputs": [[198, 0, 0], [199, 0, 0]]
+      "op": "null", 
+      "name": "learned_3", 
+      "attrs": {"__shape__": "(3,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution43", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "no_bias": "False", 
+        "num_filter": "3", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[201, 0, 0], [202, 0, 0], [203, 0, 0]]
     }
   ], 
   "arg_nodes": [
     0, 
-    1, 
-    4, 
-    5, 
-    8, 
-    9, 
-    13, 
-    14, 
-    18, 
-    19, 
-    25, 
-    26, 
-    41, 
-    42, 
-    57, 
-    58, 
-    63, 
-    64, 
-    68, 
-    69, 
-    73, 
-    74, 
-    78, 
-    79, 
-    85, 
-    86, 
-    101, 
-    102, 
-    117, 
-    118, 
-    123, 
-    124, 
-    128, 
-    129, 
-    133, 
-    134, 
-    138, 
-    139, 
-    145, 
-    146, 
-    161, 
-    162, 
-    177, 
-    178, 
-    183, 
-    184, 
-    188, 
-    189, 
-    196, 
-    197, 
-    199
+    2, 
+    3, 
+    6, 
+    7, 
+    10, 
+    11, 
+    15, 
+    16, 
+    20, 
+    21, 
+    27, 
+    28, 
+    43, 
+    44, 
+    59, 
+    60, 
+    65, 
+    66, 
+    70, 
+    71, 
+    75, 
+    76, 
+    80, 
+    81, 
+    87, 
+    88, 
+    103, 
+    104, 
+    119, 
+    120, 
+    125, 
+    126, 
+    130, 
+    131, 
+    135, 
+    136, 
+    140, 
+    141, 
+    147, 
+    148, 
+    163, 
+    164, 
+    179, 
+    180, 
+    185, 
+    186, 
+    190, 
+    191, 
+    198, 
+    199, 
+    202, 
+    203
   ], 
   "node_row_ptr": [
     0, 
@@ -1864,8 +1912,12 @@
     198, 
     199, 
     200, 
-    201
+    201, 
+    202, 
+    203, 
+    204, 
+    205
   ], 
-  "heads": [[200, 0, 0]], 
+  "heads": [[204, 0, 0]], 
   "attrs": {"mxnet_version": ["int", 10300]}
 }
