@@ -1,0 +1,478 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad0", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 4, 4, 4, 4)"
+      }, 
+      "inputs": [[0, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_0", 
+      "attrs": {"__shape__": "(64, 1, 9, 9)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_1", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution0", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(9, 9)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[1, 0, 0], [2, 0, 0], [3, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_2", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_3", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_4", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_5", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm0", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[4, 0, 0], [5, 0, 0], [6, 0, 0], [7, 0, 1], [8, 0, 1]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu0", 
+      "inputs": [[9, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad1", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 4, 4, 4, 4)"
+      }, 
+      "inputs": [[10, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_6", 
+      "attrs": {"__shape__": "(64, 1, 9, 9)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_7", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(9, 9)", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "64", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[11, 0, 0], [12, 0, 0], [13, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_8", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_9", 
+      "attrs": {"__shape__": "(64,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_10", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_11", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(64,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm1", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[14, 0, 0], [15, 0, 0], [16, 0, 0], [17, 0, 1], [18, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_mul", 
+      "name": "broadcast_mul0", 
+      "inputs": [[19, 0, 0], [19, 0, 0]]
+    }, 
+    {
+      "op": "negative", 
+      "name": "negative0", 
+      "inputs": [[20, 0, 0]]
+    }, 
+    {
+      "op": "exp", 
+      "name": "exp0", 
+      "inputs": [[21, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_mul", 
+      "name": "broadcast_mul1", 
+      "inputs": [[4, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad2", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
+      }, 
+      "inputs": [[23, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_12", 
+      "attrs": {"__shape__": "(32, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_13", 
+      "attrs": {"__shape__": "(32,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[24, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_14", 
+      "attrs": {"__shape__": "(32,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_15", 
+      "attrs": {"__shape__": "(32,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_16", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(32,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_17", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(32,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm2", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[27, 0, 0], [28, 0, 0], [29, 0, 0], [30, 0, 1], [31, 0, 1]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu1", 
+      "inputs": [[32, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad3", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 4, 4, 4, 4)"
+      }, 
+      "inputs": [[33, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_18", 
+      "attrs": {"__shape__": "(32, 1, 9, 9)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_19", 
+      "attrs": {"__shape__": "(32,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution3", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(9, 9)", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "32", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[34, 0, 0], [35, 0, 0], [36, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_20", 
+      "attrs": {"__shape__": "(32,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_21", 
+      "attrs": {"__shape__": "(32,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_22", 
+      "attrs": {
+        "__init__": "[\"zero\", {}]", 
+        "__shape__": "(32,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_23", 
+      "attrs": {
+        "__init__": "[\"one\", {}]", 
+        "__shape__": "(32,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm3", 
+      "attrs": {
+        "cudnn_off": "1", 
+        "eps": "9.999999747378752e-06", 
+        "fix_gamma": "False", 
+        "momentum": "0.8999999761581421"
+      }, 
+      "inputs": [[37, 0, 0], [38, 0, 0], [39, 0, 0], [40, 0, 1], [41, 0, 1]]
+    }, 
+    {
+      "op": "broadcast_mul", 
+      "name": "broadcast_mul2", 
+      "inputs": [[42, 0, 0], [42, 0, 0]]
+    }, 
+    {
+      "op": "negative", 
+      "name": "negative1", 
+      "inputs": [[43, 0, 0]]
+    }, 
+    {
+      "op": "exp", 
+      "name": "exp1", 
+      "inputs": [[44, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_mul", 
+      "name": "broadcast_mul3", 
+      "inputs": [[27, 0, 0], [45, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad4", 
+      "attrs": {
+        "mode": "constant", 
+        "pad_width": "(0, 0, 0, 0, 2, 2, 2, 2)"
+      }, 
+      "inputs": [[46, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_24", 
+      "attrs": {"__shape__": "(1, 32, 5, 5)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_25", 
+      "attrs": {"__shape__": "(1,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution4", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(5, 5)", 
+        "no_bias": "False", 
+        "num_filter": "1", 
+        "num_group": "1", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[47, 0, 0], [48, 0, 0], [49, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [
+    0, 
+    2, 
+    3, 
+    5, 
+    6, 
+    7, 
+    8, 
+    12, 
+    13, 
+    15, 
+    16, 
+    17, 
+    18, 
+    25, 
+    26, 
+    28, 
+    29, 
+    30, 
+    31, 
+    35, 
+    36, 
+    38, 
+    39, 
+    40, 
+    41, 
+    48, 
+    49
+  ], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    12, 
+    13, 
+    14, 
+    15, 
+    16, 
+    17, 
+    18, 
+    19, 
+    20, 
+    21, 
+    24, 
+    25, 
+    26, 
+    27, 
+    28, 
+    29, 
+    30, 
+    31, 
+    32, 
+    33, 
+    34, 
+    35, 
+    36, 
+    39, 
+    40, 
+    41, 
+    42, 
+    43, 
+    44, 
+    45, 
+    46, 
+    47, 
+    48, 
+    51, 
+    52, 
+    53, 
+    54, 
+    55, 
+    56, 
+    57, 
+    58, 
+    59
+  ], 
+  "heads": [[50, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 10300]}
+}
