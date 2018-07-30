@@ -1,5 +1,10 @@
 Converted from **official** [thstkdgus35/EDSR-PyTorch](https://github.com/thstkdgus35/EDSR-PyTorch/tree/6cc05a306602d8fbac2126d522a49a63d92c983e).
 
-```
-[1] Lim, B., Son, S., Kim, H., Nah, S., & Lee, K. M. (2017). Enhanced Deep Residual Networks for Single Image Super-Resolution. In the IEEE Conference on Computer Vision and Pattern Recognition Workshops (pp. 1132-1140).
-```
+---
+
+### Reference
+[1] Lim, B., Son, S., Kim, H., Nah, S., & Lee, K. M. (2017). [Enhanced Deep Residual Networks for Single Image Super-Resolution](https://ieeexplore.ieee.org/document/8014885/). In the IEEE Conference on Computer Vision and Pattern Recognition Workshops (pp. 1132-1140). [[PDF]](http://cv.snu.ac.kr/publication/conf/2017/EDSR.pdf) [[Code-PyTorch]](https://github.com/thstkdgus35/EDSR-PyTorch) [[Code-Torch]](https://github.com/LimBee/NTIRE2017) [[Slide]](https://cv.snu.ac.kr/research/EDSR/Presentation_v3(release).pptx) [[Challenge Factsheet]](http://www.vision.ee.ethz.ch/ntire17/SR_challenge/limbee_SNU_CVLab_Factsheet.pdf)
+
+[2] Timofte, R., Agustsson, E., Van Gool, L., Yang, M. H., Zhang, L., Lim, B., ... & Wang, X. (2017). [NTIRE 2017 Challenge on Single Image Super-Resolution: Methods and Results](https://ieeexplore.ieee.org/document/8014883/). In the IEEE Conference on Computer Vision and Pattern Recognition Workshops (pp. 1110-1121). [[PDF]](http://people.ee.ethz.ch/~timofter/publications/Timofte-CVPRW-2017.pdf) [[Project]](http://www.vision.ee.ethz.ch/ntire17/#challenge) [[Challenge Factsheets]](http://people.ee.ethz.ch/~timofter/publications/NTIRE2017SRchallenge_factsheets.pdf)
+
+[3] Agustsson, E., & Timofte, R. (2017). [NTIRE 2017 Challenge on Single Image Super-Resolution: Dataset and Study](https://ieeexplore.ieee.org/document/8014884/) In the IEEE Conference on Computer Vision and Pattern Recognition Workshops (pp. 1122-1131). [[PDF]](http://openaccess.thecvf.com/content_cvpr_2017_workshops/w12/papers/Agustsson_NTIRE_2017_Challenge_CVPR_2017_paper.pdf) [[Supplementary Material]](http://people.ee.ethz.ch/~timofter/publications/Agustsson-CVPRW-2017suppl.pdf) [[Project]](http://www.vision.ee.ethz.ch/ntire17/#challenge) [[Challenge Factsheets]](http://people.ee.ethz.ch/~timofter/publications/NTIRE2017SRchallenge_factsheets.pdf)

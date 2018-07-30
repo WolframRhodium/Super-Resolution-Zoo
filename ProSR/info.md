@@ -14,4 +14,13 @@ sr_args = dict(up_scale=4, is_rgb_model=True, pad=None, crop=None, pre_upscale=F
 
 # ProSR_8x
 sr_args = dict(up_scale=8, is_rgb_model=True, pad=None, crop=None, pre_upscale=False)
+
+# ProSRL_2x (freeze_psnr_x2_net_G.pth)
+sr_args = dict(up_scale=2, is_rgb_model=True, pad=None, crop=None, pre_upscale=False)
+
+# ProSRL_4x (freeze_psnr_x4_net_G.pth)
+sr_args = dict(up_scale=4, is_rgb_model=True, pad=None, crop=None, pre_upscale=False)
+
+# ProSRL_8x (freeze_psnr_x8_net_G.pth)
+sr_args = dict(up_scale=8, is_rgb_model=True, pad=None, crop=None, pre_upscale=False)
 ```
