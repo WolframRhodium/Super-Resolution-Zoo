@@ -1,0 +1,189 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "attrs": {
+        "__dtype__": "0"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv2d_1/kernel1", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__shape__": "(16, 1, 3, 3)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv2d_1/conv2d2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "16", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[0, 0, 0], [1, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv2d_1/bias1", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__shape__": "(16,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape1", 
+      "attrs": {"shape": "(1, 16, 1, 1)"}, 
+      "inputs": [[3, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add1", 
+      "inputs": [[2, 0, 0], [4, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu1", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.0"
+      }, 
+      "inputs": [[5, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv2d_transpose_1/kernel1", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__shape__": "(16, 32, 14, 14)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Deconvolution", 
+      "name": "conv2d_transpose_1/conv2d_transpose2", 
+      "attrs": {
+        "kernel": "(14, 14)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(6, 6)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[6, 0, 0], [7, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv2d_transpose_1/bias1", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__shape__": "(32,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape3", 
+      "attrs": {"shape": "(1, 32, 1, 1)"}, 
+      "inputs": [[9, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add3", 
+      "inputs": [[8, 0, 0], [10, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu3", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.0"
+      }, 
+      "inputs": [[11, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv2d_2/kernel1", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__shape__": "(1, 32, 5, 5)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv2d_2/conv2d2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(5, 5)", 
+        "no_bias": "True", 
+        "num_filter": "1", 
+        "pad": "(2, 2)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[12, 0, 0], [13, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv2d_2/bias1", 
+      "attrs": {
+        "__dtype__": "0", 
+        "__shape__": "(1,)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape5", 
+      "attrs": {"shape": "(1, 1, 1, 1)"}, 
+      "inputs": [[15, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "broadcast_add5", 
+      "inputs": [[14, 0, 0], [16, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "leakyrelu5", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.0"
+      }, 
+      "inputs": [[17, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [0, 1, 3, 7, 9, 13, 15], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    11, 
+    12, 
+    13, 
+    14, 
+    15, 
+    16, 
+    17, 
+    18, 
+    19
+  ], 
+  "heads": [[18, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 10300]}
+}
