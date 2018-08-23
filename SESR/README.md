@@ -3,4 +3,4 @@ Converted from **official** [opteroncx/SESR](https://github.com/opteroncx/SESR/t
 ---
 
 ### Reference
-[1] Cheng, X., Li, X., Tai, Y., & Yang, J. (2018). SESR: Single Image Super Resolution with Recursive Squeeze and Excitation Networks. arXiv preprint arXiv:1801.10319. [[PDF]](https://arxiv.org/pdf/1801.10319) [[Code]](https://github.com/opteroncx/SESR)
+[1] Cheng, X., Li, X., Yang, J. & Tai, Y. (2018). SESR: Single Image Super Resolution with Recursive Squeeze and Excitation Networks. In proceedings of International Conference on Pattern Recognition. [[PDF]](https://arxiv.org/pdf/1801.10319) [[Code]](https://github.com/opteroncx/SESR)

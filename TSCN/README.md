@@ -1,1 +1,6 @@
-Converted from **official** [Zheng222/TSCN](https://github.com/Zheng222/TSCN/tree/0508cfb7da6ca2e03113e7de5975a4a462c63bbe).
+Converted from **official** [Zheng222/TSCN](https://github.com/Zheng222/TSCN/tree/20818c148a6f02a0d5e7c75553528f52dbebcf6a).
+
+---
+
+### Reference
+[1] Hui, Z., Wang, X., & Gao, X. (2018). Two-Stage Convolutional Network for Image Super-Resolution. In proceedings of International Conference on Pattern Recognition. [[PDF]](https://github.com/Zheng222/TSCN/blob/20818c148a6f02a0d5e7c75553528f52dbebcf6a/files/TSCN.pdf) [[Code]](https://github.com/Zheng222/TSCN)
