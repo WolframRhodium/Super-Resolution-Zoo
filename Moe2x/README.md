@@ -1,0 +1,1 @@
+Converted from model trained by [kice](https://github.com/kice). The model is modified from [opteroncx/MoePhoto](https://github.com/opteroncx/MoePhoto/blob/f99b12a5cfaac0ecaf2ea1b1c3f1b7374bbab86f/python/models.py#L129-L182).
