@@ -1,0 +1,263 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_0", 
+      "attrs": {"__shape__": "(3, 3, 1, 1)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_1", 
+      "attrs": {"__shape__": "(3,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution0", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "3", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[0, 0, 0], [1, 0, 0], [2, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu0", 
+      "inputs": [[3, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_2", 
+      "attrs": {"__shape__": "(3, 3, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_3", 
+      "attrs": {"__shape__": "(3,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "3", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[4, 0, 0], [5, 0, 0], [6, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu1", 
+      "inputs": [[7, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat0", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[4, 0, 0], [8, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_4", 
+      "attrs": {"__shape__": "(3, 6, 5, 5)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_5", 
+      "attrs": {"__shape__": "(3,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(5, 5)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "3", 
+        "num_group": "1", 
+        "pad": "(2, 2)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[9, 0, 0], [10, 0, 0], [11, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu2", 
+      "inputs": [[12, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat1", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[8, 0, 0], [13, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_6", 
+      "attrs": {"__shape__": "(3, 6, 7, 7)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_7", 
+      "attrs": {"__shape__": "(3,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution3", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(7, 7)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "3", 
+        "num_group": "1", 
+        "pad": "(3, 3)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[14, 0, 0], [15, 0, 0], [16, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu3", 
+      "inputs": [[17, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat2", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "4"
+      }, 
+      "inputs": [[4, 0, 0], [8, 0, 0], [13, 0, 0], [18, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_8", 
+      "attrs": {"__shape__": "(3, 12, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "learned_9", 
+      "attrs": {"__shape__": "(3,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution4", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "3", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[19, 0, 0], [20, 0, 0], [21, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu4", 
+      "inputs": [[22, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_mul", 
+      "name": "broadcast_mul0", 
+      "inputs": [[23, 0, 0], [0, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_sub", 
+      "name": "broadcast_sub0", 
+      "inputs": [[24, 0, 0], [23, 0, 0]]
+    }, 
+    {
+      "op": "_plus_scalar", 
+      "name": "_plusscalar0", 
+      "attrs": {"scalar": "1.0"}, 
+      "inputs": [[25, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu5", 
+      "inputs": [[26, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [
+    0, 
+    1, 
+    2, 
+    5, 
+    6, 
+    10, 
+    11, 
+    15, 
+    16, 
+    20, 
+    21
+  ], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    11, 
+    12, 
+    13, 
+    14, 
+    15, 
+    16, 
+    17, 
+    18, 
+    19, 
+    20, 
+    21, 
+    22, 
+    23, 
+    24, 
+    25, 
+    26, 
+    27, 
+    28
+  ], 
+  "heads": [[27, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 10300]}
+}
