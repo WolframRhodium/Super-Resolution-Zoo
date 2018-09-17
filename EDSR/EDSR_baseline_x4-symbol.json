@@ -7,45 +7,14 @@
     }, 
     {
       "op": "null", 
-      "name": "neg_DIV2K_mean", 
-      "attrs": {"__shape__": "(1, 3, 1, 1)"}, 
-      "inputs": []
-    }, 
-    {
-      "op": "broadcast_add", 
-      "name": "pre_mean_shift", 
-      "inputs": [[0, 0, 0], [1, 0, 0]]
-    }, 
-    {
-      "op": "null", 
-      "name": "dynamic_range_multiplier", 
-      "attrs": {"__shape__": "(1, 1, 1, 1)"}, 
-      "inputs": []
-    }, 
-    {
-      "op": "broadcast_mul", 
-      "name": "scale_to_dynamic_range", 
-      "inputs": [[2, 0, 0], [3, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad0", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[4, 0, 0]]
-    }, 
-    {
-      "op": "null", 
-      "name": "learned_0", 
-      "attrs": {"__shape__": "(64, 3, 3, 3)"}, 
+      "name": "sub_mean.weight", 
+      "attrs": {"__shape__": "(3, 3, 1, 1)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_1", 
-      "attrs": {"__shape__": "(64,)"}, 
+      "name": "sub_mean.bias", 
+      "attrs": {"__shape__": "(3,)"}, 
       "inputs": []
     }, 
     {
@@ -53,32 +22,25 @@
       "name": "convolution0", 
       "attrs": {
         "dilate": "(1, 1)", 
-        "kernel": "(3, 3)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
-        "num_filter": "64", 
+        "num_filter": "3", 
         "num_group": "1", 
+        "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[5, 0, 0], [6, 0, 0], [7, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad1", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[8, 0, 0]]
+      "inputs": [[0, 0, 0], [1, 0, 0], [2, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_2", 
-      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
+      "name": "head.0.weight", 
+      "attrs": {"__shape__": "(64, 3, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_3", 
+      "name": "head.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -88,36 +50,24 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[9, 0, 0], [10, 0, 0], [11, 0, 0]]
-    }, 
-    {
-      "op": "relu", 
-      "name": "relu0", 
-      "inputs": [[12, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad2", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[13, 0, 0]]
+      "inputs": [[3, 0, 0], [4, 0, 0], [5, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_4", 
+      "name": "body.0.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_5", 
+      "name": "body.0.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -127,36 +77,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[14, 0, 0], [15, 0, 0], [16, 0, 0]]
+      "inputs": [[6, 0, 0], [7, 0, 0], [8, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add0", 
-      "inputs": [[17, 0, 0], [8, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad3", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[18, 0, 0]]
+      "op": "relu", 
+      "name": "relu0", 
+      "inputs": [[9, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_6", 
+      "name": "body.0.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_7", 
+      "name": "body.0.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -166,36 +109,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[19, 0, 0], [20, 0, 0], [21, 0, 0]]
+      "inputs": [[10, 0, 0], [11, 0, 0], [12, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu1", 
-      "inputs": [[22, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad4", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[23, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add0", 
+      "inputs": [[13, 0, 0], [6, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_8", 
+      "name": "body.1.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_9", 
+      "name": "body.1.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -205,36 +141,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[24, 0, 0], [25, 0, 0], [26, 0, 0]]
+      "inputs": [[14, 0, 0], [15, 0, 0], [16, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add1", 
-      "inputs": [[27, 0, 0], [18, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad5", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[28, 0, 0]]
+      "op": "relu", 
+      "name": "relu1", 
+      "inputs": [[17, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_10", 
+      "name": "body.1.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_11", 
+      "name": "body.1.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -244,36 +173,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[29, 0, 0], [30, 0, 0], [31, 0, 0]]
+      "inputs": [[18, 0, 0], [19, 0, 0], [20, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu2", 
-      "inputs": [[32, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad6", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[33, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add1", 
+      "inputs": [[21, 0, 0], [14, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_12", 
+      "name": "body.2.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_13", 
+      "name": "body.2.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -283,36 +205,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[34, 0, 0], [35, 0, 0], [36, 0, 0]]
+      "inputs": [[22, 0, 0], [23, 0, 0], [24, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add2", 
-      "inputs": [[37, 0, 0], [28, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad7", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[38, 0, 0]]
+      "op": "relu", 
+      "name": "relu2", 
+      "inputs": [[25, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_14", 
+      "name": "body.2.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_15", 
+      "name": "body.2.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -322,36 +237,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[39, 0, 0], [40, 0, 0], [41, 0, 0]]
+      "inputs": [[26, 0, 0], [27, 0, 0], [28, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu3", 
-      "inputs": [[42, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad8", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[43, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add2", 
+      "inputs": [[29, 0, 0], [22, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_16", 
+      "name": "body.3.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_17", 
+      "name": "body.3.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -361,36 +269,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[44, 0, 0], [45, 0, 0], [46, 0, 0]]
+      "inputs": [[30, 0, 0], [31, 0, 0], [32, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add3", 
-      "inputs": [[47, 0, 0], [38, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad9", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[48, 0, 0]]
+      "op": "relu", 
+      "name": "relu3", 
+      "inputs": [[33, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_18", 
+      "name": "body.3.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_19", 
+      "name": "body.3.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -400,36 +301,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[49, 0, 0], [50, 0, 0], [51, 0, 0]]
+      "inputs": [[34, 0, 0], [35, 0, 0], [36, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu4", 
-      "inputs": [[52, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad10", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[53, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add3", 
+      "inputs": [[37, 0, 0], [30, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_20", 
+      "name": "body.4.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_21", 
+      "name": "body.4.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -439,36 +333,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[54, 0, 0], [55, 0, 0], [56, 0, 0]]
+      "inputs": [[38, 0, 0], [39, 0, 0], [40, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add4", 
-      "inputs": [[57, 0, 0], [48, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad11", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[58, 0, 0]]
+      "op": "relu", 
+      "name": "relu4", 
+      "inputs": [[41, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_22", 
+      "name": "body.4.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_23", 
+      "name": "body.4.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -478,36 +365,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[59, 0, 0], [60, 0, 0], [61, 0, 0]]
+      "inputs": [[42, 0, 0], [43, 0, 0], [44, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu5", 
-      "inputs": [[62, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad12", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[63, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add4", 
+      "inputs": [[45, 0, 0], [38, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_24", 
+      "name": "body.5.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_25", 
+      "name": "body.5.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -517,36 +397,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[64, 0, 0], [65, 0, 0], [66, 0, 0]]
+      "inputs": [[46, 0, 0], [47, 0, 0], [48, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add5", 
-      "inputs": [[67, 0, 0], [58, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad13", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[68, 0, 0]]
+      "op": "relu", 
+      "name": "relu5", 
+      "inputs": [[49, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_26", 
+      "name": "body.5.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_27", 
+      "name": "body.5.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -556,36 +429,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[69, 0, 0], [70, 0, 0], [71, 0, 0]]
+      "inputs": [[50, 0, 0], [51, 0, 0], [52, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu6", 
-      "inputs": [[72, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad14", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[73, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add5", 
+      "inputs": [[53, 0, 0], [46, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_28", 
+      "name": "body.6.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_29", 
+      "name": "body.6.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -595,36 +461,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[74, 0, 0], [75, 0, 0], [76, 0, 0]]
+      "inputs": [[54, 0, 0], [55, 0, 0], [56, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add6", 
-      "inputs": [[77, 0, 0], [68, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad15", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[78, 0, 0]]
+      "op": "relu", 
+      "name": "relu6", 
+      "inputs": [[57, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_30", 
+      "name": "body.6.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_31", 
+      "name": "body.6.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -634,36 +493,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[79, 0, 0], [80, 0, 0], [81, 0, 0]]
+      "inputs": [[58, 0, 0], [59, 0, 0], [60, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu7", 
-      "inputs": [[82, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad16", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[83, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add6", 
+      "inputs": [[61, 0, 0], [54, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_32", 
+      "name": "body.7.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_33", 
+      "name": "body.7.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -673,36 +525,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[84, 0, 0], [85, 0, 0], [86, 0, 0]]
+      "inputs": [[62, 0, 0], [63, 0, 0], [64, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add7", 
-      "inputs": [[87, 0, 0], [78, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad17", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[88, 0, 0]]
+      "op": "relu", 
+      "name": "relu7", 
+      "inputs": [[65, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_34", 
+      "name": "body.7.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_35", 
+      "name": "body.7.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -712,36 +557,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[89, 0, 0], [90, 0, 0], [91, 0, 0]]
+      "inputs": [[66, 0, 0], [67, 0, 0], [68, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu8", 
-      "inputs": [[92, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad18", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[93, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add7", 
+      "inputs": [[69, 0, 0], [62, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_36", 
+      "name": "body.8.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_37", 
+      "name": "body.8.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -751,36 +589,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[94, 0, 0], [95, 0, 0], [96, 0, 0]]
+      "inputs": [[70, 0, 0], [71, 0, 0], [72, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add8", 
-      "inputs": [[97, 0, 0], [88, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad19", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[98, 0, 0]]
+      "op": "relu", 
+      "name": "relu8", 
+      "inputs": [[73, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_38", 
+      "name": "body.8.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_39", 
+      "name": "body.8.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -790,36 +621,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[99, 0, 0], [100, 0, 0], [101, 0, 0]]
+      "inputs": [[74, 0, 0], [75, 0, 0], [76, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu9", 
-      "inputs": [[102, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad20", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[103, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add8", 
+      "inputs": [[77, 0, 0], [70, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_40", 
+      "name": "body.9.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_41", 
+      "name": "body.9.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -829,36 +653,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[104, 0, 0], [105, 0, 0], [106, 0, 0]]
+      "inputs": [[78, 0, 0], [79, 0, 0], [80, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add9", 
-      "inputs": [[107, 0, 0], [98, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad21", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[108, 0, 0]]
+      "op": "relu", 
+      "name": "relu9", 
+      "inputs": [[81, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_42", 
+      "name": "body.9.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_43", 
+      "name": "body.9.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -868,36 +685,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[109, 0, 0], [110, 0, 0], [111, 0, 0]]
+      "inputs": [[82, 0, 0], [83, 0, 0], [84, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu10", 
-      "inputs": [[112, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad22", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[113, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add9", 
+      "inputs": [[85, 0, 0], [78, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_44", 
+      "name": "body.10.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_45", 
+      "name": "body.10.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -907,36 +717,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[114, 0, 0], [115, 0, 0], [116, 0, 0]]
+      "inputs": [[86, 0, 0], [87, 0, 0], [88, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add10", 
-      "inputs": [[117, 0, 0], [108, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad23", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[118, 0, 0]]
+      "op": "relu", 
+      "name": "relu10", 
+      "inputs": [[89, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_46", 
+      "name": "body.10.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_47", 
+      "name": "body.10.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -946,36 +749,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[119, 0, 0], [120, 0, 0], [121, 0, 0]]
+      "inputs": [[90, 0, 0], [91, 0, 0], [92, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu11", 
-      "inputs": [[122, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad24", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[123, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add10", 
+      "inputs": [[93, 0, 0], [86, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_48", 
+      "name": "body.11.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_49", 
+      "name": "body.11.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -985,36 +781,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[124, 0, 0], [125, 0, 0], [126, 0, 0]]
+      "inputs": [[94, 0, 0], [95, 0, 0], [96, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add11", 
-      "inputs": [[127, 0, 0], [118, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad25", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[128, 0, 0]]
+      "op": "relu", 
+      "name": "relu11", 
+      "inputs": [[97, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_50", 
+      "name": "body.11.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_51", 
+      "name": "body.11.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1024,36 +813,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[129, 0, 0], [130, 0, 0], [131, 0, 0]]
+      "inputs": [[98, 0, 0], [99, 0, 0], [100, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu12", 
-      "inputs": [[132, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad26", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[133, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add11", 
+      "inputs": [[101, 0, 0], [94, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_52", 
+      "name": "body.12.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_53", 
+      "name": "body.12.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1063,36 +845,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[134, 0, 0], [135, 0, 0], [136, 0, 0]]
+      "inputs": [[102, 0, 0], [103, 0, 0], [104, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add12", 
-      "inputs": [[137, 0, 0], [128, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad27", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[138, 0, 0]]
+      "op": "relu", 
+      "name": "relu12", 
+      "inputs": [[105, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_54", 
+      "name": "body.12.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_55", 
+      "name": "body.12.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1102,36 +877,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[139, 0, 0], [140, 0, 0], [141, 0, 0]]
+      "inputs": [[106, 0, 0], [107, 0, 0], [108, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu13", 
-      "inputs": [[142, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad28", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[143, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add12", 
+      "inputs": [[109, 0, 0], [102, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_56", 
+      "name": "body.13.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_57", 
+      "name": "body.13.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1141,36 +909,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[144, 0, 0], [145, 0, 0], [146, 0, 0]]
+      "inputs": [[110, 0, 0], [111, 0, 0], [112, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add13", 
-      "inputs": [[147, 0, 0], [138, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad29", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[148, 0, 0]]
+      "op": "relu", 
+      "name": "relu13", 
+      "inputs": [[113, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_58", 
+      "name": "body.13.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_59", 
+      "name": "body.13.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1180,36 +941,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[149, 0, 0], [150, 0, 0], [151, 0, 0]]
+      "inputs": [[114, 0, 0], [115, 0, 0], [116, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu14", 
-      "inputs": [[152, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad30", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[153, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add13", 
+      "inputs": [[117, 0, 0], [110, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_60", 
+      "name": "body.14.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_61", 
+      "name": "body.14.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1219,36 +973,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[154, 0, 0], [155, 0, 0], [156, 0, 0]]
+      "inputs": [[118, 0, 0], [119, 0, 0], [120, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add14", 
-      "inputs": [[157, 0, 0], [148, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad31", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[158, 0, 0]]
+      "op": "relu", 
+      "name": "relu14", 
+      "inputs": [[121, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_62", 
+      "name": "body.14.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_63", 
+      "name": "body.14.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1258,36 +1005,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[159, 0, 0], [160, 0, 0], [161, 0, 0]]
+      "inputs": [[122, 0, 0], [123, 0, 0], [124, 0, 0]]
     }, 
     {
-      "op": "relu", 
-      "name": "relu15", 
-      "inputs": [[162, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad32", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[163, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add14", 
+      "inputs": [[125, 0, 0], [118, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_64", 
+      "name": "body.15.body.0.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_65", 
+      "name": "body.15.body.0.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1297,36 +1037,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[164, 0, 0], [165, 0, 0], [166, 0, 0]]
+      "inputs": [[126, 0, 0], [127, 0, 0], [128, 0, 0]]
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "broadcast_add15", 
-      "inputs": [[167, 0, 0], [158, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad33", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[168, 0, 0]]
+      "op": "relu", 
+      "name": "relu15", 
+      "inputs": [[129, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_66", 
+      "name": "body.15.body.2.weight", 
       "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_67", 
+      "name": "body.15.body.2.bias", 
       "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
@@ -1336,37 +1069,30 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[169, 0, 0], [170, 0, 0], [171, 0, 0]]
+      "inputs": [[130, 0, 0], [131, 0, 0], [132, 0, 0]]
     }, 
     {
       "op": "broadcast_add", 
-      "name": "broadcast_add16", 
-      "inputs": [[172, 0, 0], [8, 0, 0]]
-    }, 
-    {
-      "op": "Pad", 
-      "name": "pad34", 
-      "attrs": {
-        "mode": "constant", 
-        "pad_width": "(0, 0, 0, 0, 1, 1, 1, 1)"
-      }, 
-      "inputs": [[173, 0, 0]]
+      "name": "broadcast_add15", 
+      "inputs": [[133, 0, 0], [126, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_68", 
-      "attrs": {"__shape__": "(256, 64, 3, 3)"}, 
+      "name": "body.16.weight", 
+      "attrs": {"__shape__": "(64, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_69", 
-      "attrs": {"__shape__": "(256,)"}, 
+      "name": "body.16.bias", 
+      "attrs": {"__shape__": "(64,)"}, 
       "inputs": []
     }, 
     {
@@ -1375,46 +1101,29 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
-        "num_filter": "256", 
+        "num_filter": "64", 
         "num_group": "1", 
+        "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[174, 0, 0], [175, 0, 0], [176, 0, 0]]
+      "inputs": [[134, 0, 0], [135, 0, 0], [136, 0, 0]]
     }, 
     {
-      "op": "Reshape", 
-      "name": "reshape0", 
-      "attrs": {"shape": "(0, -4, -1, 4, 0, 0)"}, 
-      "inputs": [[177, 0, 0]]
-    }, 
-    {
-      "op": "Reshape", 
-      "name": "reshape1", 
-      "attrs": {"shape": "(0, 0, -4, 2, 2, 0, 0)"}, 
-      "inputs": [[178, 0, 0]]
-    }, 
-    {
-      "op": "transpose", 
-      "name": "transpose0", 
-      "attrs": {"axes": "(0, 1, 4, 2, 5, 3)"}, 
-      "inputs": [[179, 0, 0]]
-    }, 
-    {
-      "op": "Reshape", 
-      "name": "reshape2", 
-      "attrs": {"shape": "(0, 0, -3, -3)"}, 
-      "inputs": [[180, 0, 0]]
+      "op": "broadcast_add", 
+      "name": "broadcast_add16", 
+      "inputs": [[137, 0, 0], [6, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_70", 
+      "name": "tail.0.0.weight", 
       "attrs": {"__shape__": "(256, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_71", 
+      "name": "tail.0.0.bias", 
       "attrs": {"__shape__": "(256,)"}, 
       "inputs": []
     }, 
@@ -1424,48 +1133,49 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "256", 
         "num_group": "1", 
         "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[181, 0, 0], [182, 0, 0], [183, 0, 0]]
+      "inputs": [[138, 0, 0], [139, 0, 0], [140, 0, 0]]
     }, 
     {
       "op": "Reshape", 
-      "name": "reshape3", 
+      "name": "reshape0", 
       "attrs": {"shape": "(0, -4, -1, 4, 0, 0)"}, 
-      "inputs": [[184, 0, 0]]
+      "inputs": [[141, 0, 0]]
     }, 
     {
       "op": "Reshape", 
-      "name": "reshape4", 
+      "name": "reshape1", 
       "attrs": {"shape": "(0, 0, -4, 2, 2, 0, 0)"}, 
-      "inputs": [[185, 0, 0]]
+      "inputs": [[142, 0, 0]]
     }, 
     {
       "op": "transpose", 
-      "name": "transpose1", 
+      "name": "transpose0", 
       "attrs": {"axes": "(0, 1, 4, 2, 5, 3)"}, 
-      "inputs": [[186, 0, 0]]
+      "inputs": [[143, 0, 0]]
     }, 
     {
       "op": "Reshape", 
-      "name": "reshape5", 
+      "name": "reshape2", 
       "attrs": {"shape": "(0, 0, -3, -3)"}, 
-      "inputs": [[187, 0, 0]]
+      "inputs": [[144, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "learned_72", 
-      "attrs": {"__shape__": "(3, 64, 3, 3)"}, 
+      "name": "tail.0.2.weight", 
+      "attrs": {"__shape__": "(256, 64, 3, 3)"}, 
       "inputs": []
     }, 
     {
       "op": "null", 
-      "name": "learned_73", 
-      "attrs": {"__shape__": "(3,)"}, 
+      "name": "tail.0.2.bias", 
+      "attrs": {"__shape__": "(256,)"}, 
       "inputs": []
     }, 
     {
@@ -1474,117 +1184,174 @@
       "attrs": {
         "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "256", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[145, 0, 0], [146, 0, 0], [147, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape3", 
+      "attrs": {"shape": "(0, -4, -1, 4, 0, 0)"}, 
+      "inputs": [[148, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape4", 
+      "attrs": {"shape": "(0, 0, -4, 2, 2, 0, 0)"}, 
+      "inputs": [[149, 0, 0]]
+    }, 
+    {
+      "op": "transpose", 
+      "name": "transpose0", 
+      "attrs": {"axes": "(0, 1, 4, 2, 5, 3)"}, 
+      "inputs": [[150, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape5", 
+      "attrs": {"shape": "(0, 0, -3, -3)"}, 
+      "inputs": [[151, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "tail.1.weight", 
+      "attrs": {"__shape__": "(3, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "tail.1.bias", 
+      "attrs": {"__shape__": "(3,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution37", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "3", 
         "num_group": "1", 
         "pad": "(1, 1)", 
         "stride": "(1, 1)"
       }, 
-      "inputs": [[188, 0, 0], [189, 0, 0], [190, 0, 0]]
+      "inputs": [[152, 0, 0], [153, 0, 0], [154, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "inv_dynamic_range_multiplier", 
-      "attrs": {"__shape__": "(1, 1, 1, 1)"}, 
+      "name": "add_mean.weight", 
+      "attrs": {"__shape__": "(3, 3, 1, 1)"}, 
       "inputs": []
-    }, 
-    {
-      "op": "broadcast_mul", 
-      "name": "restore_dynamic_range", 
-      "inputs": [[191, 0, 0], [192, 0, 0]]
     }, 
     {
       "op": "null", 
-      "name": "DIV2K_mean", 
-      "attrs": {"__shape__": "(1, 3, 1, 1)"}, 
+      "name": "add_mean.bias", 
+      "attrs": {"__shape__": "(3,)"}, 
       "inputs": []
     }, 
     {
-      "op": "broadcast_add", 
-      "name": "post_mean_shift", 
-      "inputs": [[193, 0, 0], [194, 0, 0]]
+      "op": "Convolution", 
+      "name": "convolution38", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "3", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[155, 0, 0], [156, 0, 0], [157, 0, 0]]
     }
   ], 
   "arg_nodes": [
     0, 
     1, 
-    3, 
-    6, 
+    2, 
+    4, 
+    5, 
     7, 
-    10, 
+    8, 
     11, 
+    12, 
     15, 
     16, 
+    19, 
     20, 
-    21, 
-    25, 
-    26, 
-    30, 
+    23, 
+    24, 
+    27, 
+    28, 
     31, 
+    32, 
     35, 
     36, 
+    39, 
     40, 
-    41, 
-    45, 
-    46, 
-    50, 
+    43, 
+    44, 
+    47, 
+    48, 
     51, 
+    52, 
     55, 
     56, 
+    59, 
     60, 
-    61, 
-    65, 
-    66, 
-    70, 
+    63, 
+    64, 
+    67, 
+    68, 
     71, 
+    72, 
     75, 
     76, 
+    79, 
     80, 
-    81, 
-    85, 
-    86, 
-    90, 
+    83, 
+    84, 
+    87, 
+    88, 
     91, 
+    92, 
     95, 
     96, 
+    99, 
     100, 
-    101, 
-    105, 
-    106, 
-    110, 
+    103, 
+    104, 
+    107, 
+    108, 
     111, 
+    112, 
     115, 
     116, 
+    119, 
     120, 
-    121, 
-    125, 
-    126, 
-    130, 
+    123, 
+    124, 
+    127, 
+    128, 
     131, 
+    132, 
     135, 
     136, 
+    139, 
     140, 
-    141, 
-    145, 
     146, 
-    150, 
-    151, 
-    155, 
+    147, 
+    153, 
+    154, 
     156, 
-    160, 
-    161, 
-    165, 
-    166, 
-    170, 
-    171, 
-    175, 
-    176, 
-    182, 
-    183, 
-    189, 
-    190, 
-    192, 
-    194
+    157
   ], 
   "node_row_ptr": [
     0, 
@@ -1746,45 +1513,8 @@
     156, 
     157, 
     158, 
-    159, 
-    160, 
-    161, 
-    162, 
-    163, 
-    164, 
-    165, 
-    166, 
-    167, 
-    168, 
-    169, 
-    170, 
-    171, 
-    172, 
-    173, 
-    174, 
-    175, 
-    176, 
-    177, 
-    178, 
-    179, 
-    180, 
-    181, 
-    182, 
-    183, 
-    184, 
-    185, 
-    186, 
-    187, 
-    188, 
-    189, 
-    190, 
-    191, 
-    192, 
-    193, 
-    194, 
-    195, 
-    196
+    159
   ], 
-  "heads": [[195, 0, 0]], 
+  "heads": [[158, 0, 0]], 
   "attrs": {"mxnet_version": ["int", 10300]}
 }
