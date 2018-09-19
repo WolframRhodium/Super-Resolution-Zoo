@@ -1,0 +1,3254 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv1.weight", 
+      "attrs": {"__shape__": "(16, 1, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv1.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution0", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[0, 0, 0], [1, 0, 0], [2, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu0", 
+      "inputs": [[3, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.0.conv.weight", 
+      "attrs": {"__shape__": "(16, 16, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.0.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[4, 0, 0], [5, 0, 0], [6, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu1", 
+      "inputs": [[7, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat0", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[4, 0, 0], [8, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.1.conv.weight", 
+      "attrs": {"__shape__": "(16, 32, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.1.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[9, 0, 0], [10, 0, 0], [11, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu2", 
+      "inputs": [[12, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat1", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[9, 0, 0], [13, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.2.conv.weight", 
+      "attrs": {"__shape__": "(16, 48, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.2.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution3", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[14, 0, 0], [15, 0, 0], [16, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu3", 
+      "inputs": [[17, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat2", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[14, 0, 0], [18, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.3.conv.weight", 
+      "attrs": {"__shape__": "(16, 64, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.3.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution4", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[19, 0, 0], [20, 0, 0], [21, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu4", 
+      "inputs": [[22, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat3", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[19, 0, 0], [23, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.4.conv.weight", 
+      "attrs": {"__shape__": "(16, 80, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.4.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution5", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[24, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu5", 
+      "inputs": [[27, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat4", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[24, 0, 0], [28, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.5.conv.weight", 
+      "attrs": {"__shape__": "(16, 96, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.5.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution6", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[29, 0, 0], [30, 0, 0], [31, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu6", 
+      "inputs": [[32, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat5", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[29, 0, 0], [33, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.6.conv.weight", 
+      "attrs": {"__shape__": "(16, 112, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.6.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution7", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[34, 0, 0], [35, 0, 0], [36, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu7", 
+      "inputs": [[37, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat6", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[34, 0, 0], [38, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.7.conv.weight", 
+      "attrs": {"__shape__": "(16, 128, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense1.7.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution8", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[39, 0, 0], [40, 0, 0], [41, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu8", 
+      "inputs": [[42, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat7", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[39, 0, 0], [43, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.0.conv.weight", 
+      "attrs": {"__shape__": "(16, 144, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.0.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution9", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[44, 0, 0], [45, 0, 0], [46, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu9", 
+      "inputs": [[47, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat8", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[44, 0, 0], [48, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.1.conv.weight", 
+      "attrs": {"__shape__": "(16, 160, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.1.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution10", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[49, 0, 0], [50, 0, 0], [51, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu10", 
+      "inputs": [[52, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat9", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[49, 0, 0], [53, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.2.conv.weight", 
+      "attrs": {"__shape__": "(16, 176, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.2.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution11", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[54, 0, 0], [55, 0, 0], [56, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu11", 
+      "inputs": [[57, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat10", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[54, 0, 0], [58, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.3.conv.weight", 
+      "attrs": {"__shape__": "(16, 192, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.3.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution12", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[59, 0, 0], [60, 0, 0], [61, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu12", 
+      "inputs": [[62, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat11", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[59, 0, 0], [63, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.4.conv.weight", 
+      "attrs": {"__shape__": "(16, 208, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.4.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution13", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[64, 0, 0], [65, 0, 0], [66, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu13", 
+      "inputs": [[67, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat12", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[64, 0, 0], [68, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.5.conv.weight", 
+      "attrs": {"__shape__": "(16, 224, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.5.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution14", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[69, 0, 0], [70, 0, 0], [71, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu14", 
+      "inputs": [[72, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat13", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[69, 0, 0], [73, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.6.conv.weight", 
+      "attrs": {"__shape__": "(16, 240, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.6.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution15", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[74, 0, 0], [75, 0, 0], [76, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu15", 
+      "inputs": [[77, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat14", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[74, 0, 0], [78, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.7.conv.weight", 
+      "attrs": {"__shape__": "(16, 256, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense2.7.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution16", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[79, 0, 0], [80, 0, 0], [81, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu16", 
+      "inputs": [[82, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat15", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[79, 0, 0], [83, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.0.conv.weight", 
+      "attrs": {"__shape__": "(16, 272, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.0.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution17", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[84, 0, 0], [85, 0, 0], [86, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu17", 
+      "inputs": [[87, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat16", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[84, 0, 0], [88, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.1.conv.weight", 
+      "attrs": {"__shape__": "(16, 288, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.1.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution18", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[89, 0, 0], [90, 0, 0], [91, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu18", 
+      "inputs": [[92, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat17", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[89, 0, 0], [93, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.2.conv.weight", 
+      "attrs": {"__shape__": "(16, 304, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.2.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution19", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[94, 0, 0], [95, 0, 0], [96, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu19", 
+      "inputs": [[97, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat18", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[94, 0, 0], [98, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.3.conv.weight", 
+      "attrs": {"__shape__": "(16, 320, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.3.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution20", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[99, 0, 0], [100, 0, 0], [101, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu20", 
+      "inputs": [[102, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat19", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[99, 0, 0], [103, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.4.conv.weight", 
+      "attrs": {"__shape__": "(16, 336, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.4.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution21", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[104, 0, 0], [105, 0, 0], [106, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu21", 
+      "inputs": [[107, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat20", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[104, 0, 0], [108, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.5.conv.weight", 
+      "attrs": {"__shape__": "(16, 352, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.5.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution22", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[109, 0, 0], [110, 0, 0], [111, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu22", 
+      "inputs": [[112, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat21", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[109, 0, 0], [113, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.6.conv.weight", 
+      "attrs": {"__shape__": "(16, 368, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.6.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution23", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[114, 0, 0], [115, 0, 0], [116, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu23", 
+      "inputs": [[117, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat22", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[114, 0, 0], [118, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.7.conv.weight", 
+      "attrs": {"__shape__": "(16, 384, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense3.7.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution24", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[119, 0, 0], [120, 0, 0], [121, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu24", 
+      "inputs": [[122, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat23", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[119, 0, 0], [123, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.0.conv.weight", 
+      "attrs": {"__shape__": "(16, 400, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.0.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution25", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[124, 0, 0], [125, 0, 0], [126, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu25", 
+      "inputs": [[127, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat24", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[124, 0, 0], [128, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.1.conv.weight", 
+      "attrs": {"__shape__": "(16, 416, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.1.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution26", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[129, 0, 0], [130, 0, 0], [131, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu26", 
+      "inputs": [[132, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat25", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[129, 0, 0], [133, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.2.conv.weight", 
+      "attrs": {"__shape__": "(16, 432, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.2.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution27", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[134, 0, 0], [135, 0, 0], [136, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu27", 
+      "inputs": [[137, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat26", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[134, 0, 0], [138, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.3.conv.weight", 
+      "attrs": {"__shape__": "(16, 448, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.3.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution28", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[139, 0, 0], [140, 0, 0], [141, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu28", 
+      "inputs": [[142, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat27", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[139, 0, 0], [143, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.4.conv.weight", 
+      "attrs": {"__shape__": "(16, 464, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.4.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution29", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[144, 0, 0], [145, 0, 0], [146, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu29", 
+      "inputs": [[147, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat28", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[144, 0, 0], [148, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.5.conv.weight", 
+      "attrs": {"__shape__": "(16, 480, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.5.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution30", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[149, 0, 0], [150, 0, 0], [151, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu30", 
+      "inputs": [[152, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat29", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[149, 0, 0], [153, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.6.conv.weight", 
+      "attrs": {"__shape__": "(16, 496, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.6.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution31", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[154, 0, 0], [155, 0, 0], [156, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu31", 
+      "inputs": [[157, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat30", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[154, 0, 0], [158, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.7.conv.weight", 
+      "attrs": {"__shape__": "(16, 512, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense4.7.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution32", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[159, 0, 0], [160, 0, 0], [161, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu32", 
+      "inputs": [[162, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat31", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[159, 0, 0], [163, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.0.conv.weight", 
+      "attrs": {"__shape__": "(16, 528, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.0.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution33", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[164, 0, 0], [165, 0, 0], [166, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu33", 
+      "inputs": [[167, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat32", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[164, 0, 0], [168, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.1.conv.weight", 
+      "attrs": {"__shape__": "(16, 544, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.1.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution34", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[169, 0, 0], [170, 0, 0], [171, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu34", 
+      "inputs": [[172, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat33", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[169, 0, 0], [173, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.2.conv.weight", 
+      "attrs": {"__shape__": "(16, 560, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.2.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution35", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[174, 0, 0], [175, 0, 0], [176, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu35", 
+      "inputs": [[177, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat34", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[174, 0, 0], [178, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.3.conv.weight", 
+      "attrs": {"__shape__": "(16, 576, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.3.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution36", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[179, 0, 0], [180, 0, 0], [181, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu36", 
+      "inputs": [[182, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat35", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[179, 0, 0], [183, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.4.conv.weight", 
+      "attrs": {"__shape__": "(16, 592, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.4.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution37", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[184, 0, 0], [185, 0, 0], [186, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu37", 
+      "inputs": [[187, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat36", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[184, 0, 0], [188, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.5.conv.weight", 
+      "attrs": {"__shape__": "(16, 608, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.5.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution38", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[189, 0, 0], [190, 0, 0], [191, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu38", 
+      "inputs": [[192, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat37", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[189, 0, 0], [193, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.6.conv.weight", 
+      "attrs": {"__shape__": "(16, 624, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.6.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution39", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[194, 0, 0], [195, 0, 0], [196, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu39", 
+      "inputs": [[197, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat38", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[194, 0, 0], [198, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.7.conv.weight", 
+      "attrs": {"__shape__": "(16, 640, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense5.7.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution40", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[199, 0, 0], [200, 0, 0], [201, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu40", 
+      "inputs": [[202, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat39", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[199, 0, 0], [203, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.0.conv.weight", 
+      "attrs": {"__shape__": "(16, 656, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.0.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution41", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[204, 0, 0], [205, 0, 0], [206, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu41", 
+      "inputs": [[207, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat40", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[204, 0, 0], [208, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.1.conv.weight", 
+      "attrs": {"__shape__": "(16, 672, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.1.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution42", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[209, 0, 0], [210, 0, 0], [211, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu42", 
+      "inputs": [[212, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat41", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[209, 0, 0], [213, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.2.conv.weight", 
+      "attrs": {"__shape__": "(16, 688, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.2.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution43", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[214, 0, 0], [215, 0, 0], [216, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu43", 
+      "inputs": [[217, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat42", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[214, 0, 0], [218, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.3.conv.weight", 
+      "attrs": {"__shape__": "(16, 704, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.3.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution44", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[219, 0, 0], [220, 0, 0], [221, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu44", 
+      "inputs": [[222, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat43", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[219, 0, 0], [223, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.4.conv.weight", 
+      "attrs": {"__shape__": "(16, 720, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.4.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution45", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[224, 0, 0], [225, 0, 0], [226, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu45", 
+      "inputs": [[227, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat44", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[224, 0, 0], [228, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.5.conv.weight", 
+      "attrs": {"__shape__": "(16, 736, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.5.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution46", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[229, 0, 0], [230, 0, 0], [231, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu46", 
+      "inputs": [[232, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat45", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[229, 0, 0], [233, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.6.conv.weight", 
+      "attrs": {"__shape__": "(16, 752, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.6.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution47", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[234, 0, 0], [235, 0, 0], [236, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu47", 
+      "inputs": [[237, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat46", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[234, 0, 0], [238, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.7.conv.weight", 
+      "attrs": {"__shape__": "(16, 768, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense6.7.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution48", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[239, 0, 0], [240, 0, 0], [241, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu48", 
+      "inputs": [[242, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat47", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[239, 0, 0], [243, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.0.conv.weight", 
+      "attrs": {"__shape__": "(16, 784, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.0.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution49", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[244, 0, 0], [245, 0, 0], [246, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu49", 
+      "inputs": [[247, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat48", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[244, 0, 0], [248, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.1.conv.weight", 
+      "attrs": {"__shape__": "(16, 800, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.1.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution50", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[249, 0, 0], [250, 0, 0], [251, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu50", 
+      "inputs": [[252, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat49", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[249, 0, 0], [253, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.2.conv.weight", 
+      "attrs": {"__shape__": "(16, 816, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.2.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution51", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[254, 0, 0], [255, 0, 0], [256, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu51", 
+      "inputs": [[257, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat50", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[254, 0, 0], [258, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.3.conv.weight", 
+      "attrs": {"__shape__": "(16, 832, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.3.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution52", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[259, 0, 0], [260, 0, 0], [261, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu52", 
+      "inputs": [[262, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat51", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[259, 0, 0], [263, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.4.conv.weight", 
+      "attrs": {"__shape__": "(16, 848, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.4.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution53", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[264, 0, 0], [265, 0, 0], [266, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu53", 
+      "inputs": [[267, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat52", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[264, 0, 0], [268, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.5.conv.weight", 
+      "attrs": {"__shape__": "(16, 864, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.5.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution54", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[269, 0, 0], [270, 0, 0], [271, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu54", 
+      "inputs": [[272, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat53", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[269, 0, 0], [273, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.6.conv.weight", 
+      "attrs": {"__shape__": "(16, 880, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.6.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution55", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[274, 0, 0], [275, 0, 0], [276, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu55", 
+      "inputs": [[277, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat54", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[274, 0, 0], [278, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.7.conv.weight", 
+      "attrs": {"__shape__": "(16, 896, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense7.7.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution56", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[279, 0, 0], [280, 0, 0], [281, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu56", 
+      "inputs": [[282, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat55", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[279, 0, 0], [283, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.0.conv.weight", 
+      "attrs": {"__shape__": "(16, 912, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.0.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution57", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[284, 0, 0], [285, 0, 0], [286, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu57", 
+      "inputs": [[287, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat56", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[284, 0, 0], [288, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.1.conv.weight", 
+      "attrs": {"__shape__": "(16, 928, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.1.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution58", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[289, 0, 0], [290, 0, 0], [291, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu58", 
+      "inputs": [[292, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat57", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[289, 0, 0], [293, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.2.conv.weight", 
+      "attrs": {"__shape__": "(16, 944, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.2.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution59", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[294, 0, 0], [295, 0, 0], [296, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu59", 
+      "inputs": [[297, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat58", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[294, 0, 0], [298, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.3.conv.weight", 
+      "attrs": {"__shape__": "(16, 960, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.3.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution60", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[299, 0, 0], [300, 0, 0], [301, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu60", 
+      "inputs": [[302, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat59", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[299, 0, 0], [303, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.4.conv.weight", 
+      "attrs": {"__shape__": "(16, 976, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.4.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution61", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[304, 0, 0], [305, 0, 0], [306, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu61", 
+      "inputs": [[307, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat60", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[304, 0, 0], [308, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.5.conv.weight", 
+      "attrs": {"__shape__": "(16, 992, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.5.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution62", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[309, 0, 0], [310, 0, 0], [311, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu62", 
+      "inputs": [[312, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat61", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[309, 0, 0], [313, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.6.conv.weight", 
+      "attrs": {"__shape__": "(16, 1008, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.6.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution63", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[314, 0, 0], [315, 0, 0], [316, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu63", 
+      "inputs": [[317, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat62", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[314, 0, 0], [318, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.7.conv.weight", 
+      "attrs": {"__shape__": "(16, 1024, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "dense8.7.conv.bias", 
+      "attrs": {"__shape__": "(16,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution64", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "16", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[319, 0, 0], [320, 0, 0], [321, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu64", 
+      "inputs": [[322, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat63", 
+      "attrs": {
+        "dim": "1", 
+        "num_args": "2"
+      }, 
+      "inputs": [[319, 0, 0], [323, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "Bottleneck.weight", 
+      "attrs": {"__shape__": "(256, 1040, 1, 1)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "Bottleneck.bias", 
+      "attrs": {"__shape__": "(256,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution65", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "256", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[324, 0, 0], [325, 0, 0], [326, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convt1.weight", 
+      "attrs": {"__shape__": "(256, 256, 4, 4)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convt1.bias", 
+      "attrs": {"__shape__": "(256,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Deconvolution", 
+      "name": "deconvolution0", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(4, 4)", 
+        "no_bias": "False", 
+        "num_filter": "256", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[327, 0, 0], [328, 0, 0], [329, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convt2.weight", 
+      "attrs": {"__shape__": "(256, 256, 4, 4)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convt2.bias", 
+      "attrs": {"__shape__": "(256,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Deconvolution", 
+      "name": "deconvolution1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(4, 4)", 
+        "no_bias": "False", 
+        "num_filter": "256", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[330, 0, 0], [331, 0, 0], [332, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv2.weight", 
+      "attrs": {"__shape__": "(1, 256, 3, 3)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv2.bias", 
+      "attrs": {"__shape__": "(1,)"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution66", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "1", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[333, 0, 0], [334, 0, 0], [335, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [
+    0, 
+    1, 
+    2, 
+    5, 
+    6, 
+    10, 
+    11, 
+    15, 
+    16, 
+    20, 
+    21, 
+    25, 
+    26, 
+    30, 
+    31, 
+    35, 
+    36, 
+    40, 
+    41, 
+    45, 
+    46, 
+    50, 
+    51, 
+    55, 
+    56, 
+    60, 
+    61, 
+    65, 
+    66, 
+    70, 
+    71, 
+    75, 
+    76, 
+    80, 
+    81, 
+    85, 
+    86, 
+    90, 
+    91, 
+    95, 
+    96, 
+    100, 
+    101, 
+    105, 
+    106, 
+    110, 
+    111, 
+    115, 
+    116, 
+    120, 
+    121, 
+    125, 
+    126, 
+    130, 
+    131, 
+    135, 
+    136, 
+    140, 
+    141, 
+    145, 
+    146, 
+    150, 
+    151, 
+    155, 
+    156, 
+    160, 
+    161, 
+    165, 
+    166, 
+    170, 
+    171, 
+    175, 
+    176, 
+    180, 
+    181, 
+    185, 
+    186, 
+    190, 
+    191, 
+    195, 
+    196, 
+    200, 
+    201, 
+    205, 
+    206, 
+    210, 
+    211, 
+    215, 
+    216, 
+    220, 
+    221, 
+    225, 
+    226, 
+    230, 
+    231, 
+    235, 
+    236, 
+    240, 
+    241, 
+    245, 
+    246, 
+    250, 
+    251, 
+    255, 
+    256, 
+    260, 
+    261, 
+    265, 
+    266, 
+    270, 
+    271, 
+    275, 
+    276, 
+    280, 
+    281, 
+    285, 
+    286, 
+    290, 
+    291, 
+    295, 
+    296, 
+    300, 
+    301, 
+    305, 
+    306, 
+    310, 
+    311, 
+    315, 
+    316, 
+    320, 
+    321, 
+    325, 
+    326, 
+    328, 
+    329, 
+    331, 
+    332, 
+    334, 
+    335
+  ], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    11, 
+    12, 
+    13, 
+    14, 
+    15, 
+    16, 
+    17, 
+    18, 
+    19, 
+    20, 
+    21, 
+    22, 
+    23, 
+    24, 
+    25, 
+    26, 
+    27, 
+    28, 
+    29, 
+    30, 
+    31, 
+    32, 
+    33, 
+    34, 
+    35, 
+    36, 
+    37, 
+    38, 
+    39, 
+    40, 
+    41, 
+    42, 
+    43, 
+    44, 
+    45, 
+    46, 
+    47, 
+    48, 
+    49, 
+    50, 
+    51, 
+    52, 
+    53, 
+    54, 
+    55, 
+    56, 
+    57, 
+    58, 
+    59, 
+    60, 
+    61, 
+    62, 
+    63, 
+    64, 
+    65, 
+    66, 
+    67, 
+    68, 
+    69, 
+    70, 
+    71, 
+    72, 
+    73, 
+    74, 
+    75, 
+    76, 
+    77, 
+    78, 
+    79, 
+    80, 
+    81, 
+    82, 
+    83, 
+    84, 
+    85, 
+    86, 
+    87, 
+    88, 
+    89, 
+    90, 
+    91, 
+    92, 
+    93, 
+    94, 
+    95, 
+    96, 
+    97, 
+    98, 
+    99, 
+    100, 
+    101, 
+    102, 
+    103, 
+    104, 
+    105, 
+    106, 
+    107, 
+    108, 
+    109, 
+    110, 
+    111, 
+    112, 
+    113, 
+    114, 
+    115, 
+    116, 
+    117, 
+    118, 
+    119, 
+    120, 
+    121, 
+    122, 
+    123, 
+    124, 
+    125, 
+    126, 
+    127, 
+    128, 
+    129, 
+    130, 
+    131, 
+    132, 
+    133, 
+    134, 
+    135, 
+    136, 
+    137, 
+    138, 
+    139, 
+    140, 
+    141, 
+    142, 
+    143, 
+    144, 
+    145, 
+    146, 
+    147, 
+    148, 
+    149, 
+    150, 
+    151, 
+    152, 
+    153, 
+    154, 
+    155, 
+    156, 
+    157, 
+    158, 
+    159, 
+    160, 
+    161, 
+    162, 
+    163, 
+    164, 
+    165, 
+    166, 
+    167, 
+    168, 
+    169, 
+    170, 
+    171, 
+    172, 
+    173, 
+    174, 
+    175, 
+    176, 
+    177, 
+    178, 
+    179, 
+    180, 
+    181, 
+    182, 
+    183, 
+    184, 
+    185, 
+    186, 
+    187, 
+    188, 
+    189, 
+    190, 
+    191, 
+    192, 
+    193, 
+    194, 
+    195, 
+    196, 
+    197, 
+    198, 
+    199, 
+    200, 
+    201, 
+    202, 
+    203, 
+    204, 
+    205, 
+    206, 
+    207, 
+    208, 
+    209, 
+    210, 
+    211, 
+    212, 
+    213, 
+    214, 
+    215, 
+    216, 
+    217, 
+    218, 
+    219, 
+    220, 
+    221, 
+    222, 
+    223, 
+    224, 
+    225, 
+    226, 
+    227, 
+    228, 
+    229, 
+    230, 
+    231, 
+    232, 
+    233, 
+    234, 
+    235, 
+    236, 
+    237, 
+    238, 
+    239, 
+    240, 
+    241, 
+    242, 
+    243, 
+    244, 
+    245, 
+    246, 
+    247, 
+    248, 
+    249, 
+    250, 
+    251, 
+    252, 
+    253, 
+    254, 
+    255, 
+    256, 
+    257, 
+    258, 
+    259, 
+    260, 
+    261, 
+    262, 
+    263, 
+    264, 
+    265, 
+    266, 
+    267, 
+    268, 
+    269, 
+    270, 
+    271, 
+    272, 
+    273, 
+    274, 
+    275, 
+    276, 
+    277, 
+    278, 
+    279, 
+    280, 
+    281, 
+    282, 
+    283, 
+    284, 
+    285, 
+    286, 
+    287, 
+    288, 
+    289, 
+    290, 
+    291, 
+    292, 
+    293, 
+    294, 
+    295, 
+    296, 
+    297, 
+    298, 
+    299, 
+    300, 
+    301, 
+    302, 
+    303, 
+    304, 
+    305, 
+    306, 
+    307, 
+    308, 
+    309, 
+    310, 
+    311, 
+    312, 
+    313, 
+    314, 
+    315, 
+    316, 
+    317, 
+    318, 
+    319, 
+    320, 
+    321, 
+    322, 
+    323, 
+    324, 
+    325, 
+    326, 
+    327, 
+    328, 
+    329, 
+    330, 
+    331, 
+    332, 
+    333, 
+    334, 
+    335, 
+    336, 
+    337
+  ], 
+  "heads": [[336, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 10300]}
+}
