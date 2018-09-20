@@ -1,4 +1,4 @@
-**Note**: Residual scaling has been excluded in the model's definition.
+**Note**: Pre-processing has been included in the model's definition (The range of input and output has been set to 1). Residual scaling is also removed if the factor is 1.
 
 ```python
 # EDSR_baseline_x2
