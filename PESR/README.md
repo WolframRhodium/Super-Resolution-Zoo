@@ -3,7 +3,7 @@ Converted from **official** [thangvubk/PESR](https://github.com/thangvubk/PESR/t
 ---
 
 ### Reference
-[1] Vu, T., Luu, T., & Yoo, C.D. (2018). Perception-Enhanced Single Image Super-Resolution via Relativistic Generative Networks. In proceedings of European Conference on Computer Vision Workshops. [[Code]](https://github.com/thangvubk/PESR)
+**[1] Vu, T., Luu, T., & Yoo, C.D. (2018). Perception-Enhanced Single Image Super-Resolution via Relativistic Generative Networks. In proceedings of European Conference on Computer Vision Workshops. [[Code]](https://github.com/thangvubk/PESR)**
 
 [2] Blau, Y., Mechrez, Ro, Timofte, R., Michaeli, T. & Zelnik-Manor, L. (2018). 2018 PIRM Challenge on Perceptual Image Super-resolution. In proceedings of European Conference on Computer Vision Workshops. [[PDF]](https://arxiv.org/pdf/1809.07517.pdf) [[Project]](https://www.pirm2018.org/PIRM-SR.html)
 
