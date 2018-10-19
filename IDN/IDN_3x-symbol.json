@@ -1,0 +1,2008 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv1_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv1_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[0, 0, 0], [1, 0, 0], [2, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv1", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[3, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv2_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv2_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[4, 0, 0], [5, 0, 0], [6, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv2", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[7, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_1_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_1_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv3_1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[8, 0, 0], [9, 0, 0], [10, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv3_1", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[11, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_2_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_2_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv3_2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[12, 0, 0], [13, 0, 0], [14, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv3_2", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[15, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_3_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_3_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv3_3", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[16, 0, 0], [17, 0, 0], [18, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv3_3", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[19, 0, 0]]
+    }, 
+    {
+      "op": "slice_axis", 
+      "name": "slice1_1", 
+      "attrs": {
+        "axis": "1", 
+        "begin": "0", 
+        "end": "16"
+      }, 
+      "inputs": [[20, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat1", 
+      "attrs": {"num_args": "2"}, 
+      "inputs": [[8, 0, 0], [21, 0, 0]]
+    }, 
+    {
+      "op": "slice_axis", 
+      "name": "slice1_2", 
+      "attrs": {
+        "axis": "1", 
+        "begin": "16", 
+        "end": "64"
+      }, 
+      "inputs": [[20, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_4_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_4_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv3_4", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[23, 0, 0], [24, 0, 0], [25, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv3_4", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[26, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_5_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_5_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv3_5", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[27, 0, 0], [28, 0, 0], [29, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv3_5", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[30, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_6_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv3_6_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv3_6", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[31, 0, 0], [32, 0, 0], [33, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv3_6", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[34, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "sum1", 
+      "inputs": [[22, 0, 0], [35, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "down1_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "down1_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "down1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[36, 0, 0], [37, 0, 0], [38, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_down1", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[39, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_1_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_1_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv4_1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[40, 0, 0], [41, 0, 0], [42, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv4_1", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[43, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_2_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_2_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv4_2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[44, 0, 0], [45, 0, 0], [46, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv4_2", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[47, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_3_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_3_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv4_3", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[48, 0, 0], [49, 0, 0], [50, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv4_3", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[51, 0, 0]]
+    }, 
+    {
+      "op": "slice_axis", 
+      "name": "slice2_1", 
+      "attrs": {
+        "axis": "1", 
+        "begin": "0", 
+        "end": "16"
+      }, 
+      "inputs": [[52, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat2", 
+      "attrs": {"num_args": "2"}, 
+      "inputs": [[40, 0, 0], [53, 0, 0]]
+    }, 
+    {
+      "op": "slice_axis", 
+      "name": "slice2_2", 
+      "attrs": {
+        "axis": "1", 
+        "begin": "16", 
+        "end": "64"
+      }, 
+      "inputs": [[52, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_4_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_4_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv4_4", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[55, 0, 0], [56, 0, 0], [57, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv4_4", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[58, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_5_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_5_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv4_5", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[59, 0, 0], [60, 0, 0], [61, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv4_5", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[62, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_6_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv4_6_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv4_6", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[63, 0, 0], [64, 0, 0], [65, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv4_6", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[66, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "sum2", 
+      "inputs": [[54, 0, 0], [67, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "down2_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "down2_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "down2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[68, 0, 0], [69, 0, 0], [70, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_down2", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[71, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_1_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_1_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv5_1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[72, 0, 0], [73, 0, 0], [74, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv5_1", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[75, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_2_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_2_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv5_2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[76, 0, 0], [77, 0, 0], [78, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv5_2", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[79, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_3_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_3_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv5_3", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[80, 0, 0], [81, 0, 0], [82, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv5_3", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[83, 0, 0]]
+    }, 
+    {
+      "op": "slice_axis", 
+      "name": "slice3_1", 
+      "attrs": {
+        "axis": "1", 
+        "begin": "0", 
+        "end": "16"
+      }, 
+      "inputs": [[84, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat3", 
+      "attrs": {"num_args": "2"}, 
+      "inputs": [[72, 0, 0], [85, 0, 0]]
+    }, 
+    {
+      "op": "slice_axis", 
+      "name": "slice3_2", 
+      "attrs": {
+        "axis": "1", 
+        "begin": "16", 
+        "end": "64"
+      }, 
+      "inputs": [[84, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_4_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_4_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv5_4", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[87, 0, 0], [88, 0, 0], [89, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv5_4", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[90, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_5_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_5_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv5_5", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[91, 0, 0], [92, 0, 0], [93, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv5_5", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[94, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_6_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv5_6_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv5_6", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[95, 0, 0], [96, 0, 0], [97, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv5_6", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[98, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "sum3", 
+      "inputs": [[86, 0, 0], [99, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "down3_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "down3_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "down3", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[100, 0, 0], [101, 0, 0], [102, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_down3", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[103, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_1_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_1_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv6_1", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[104, 0, 0], [105, 0, 0], [106, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv6_1", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[107, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_2_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_2_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv6_2", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[108, 0, 0], [109, 0, 0], [110, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv6_2", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[111, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_3_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_3_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv6_3", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[112, 0, 0], [113, 0, 0], [114, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv6_3", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[115, 0, 0]]
+    }, 
+    {
+      "op": "slice_axis", 
+      "name": "slice4_1", 
+      "attrs": {
+        "axis": "1", 
+        "begin": "0", 
+        "end": "16"
+      }, 
+      "inputs": [[116, 0, 0]]
+    }, 
+    {
+      "op": "Concat", 
+      "name": "concat4", 
+      "attrs": {"num_args": "2"}, 
+      "inputs": [[104, 0, 0], [117, 0, 0]]
+    }, 
+    {
+      "op": "slice_axis", 
+      "name": "slice4_2", 
+      "attrs": {
+        "axis": "1", 
+        "begin": "16", 
+        "end": "64"
+      }, 
+      "inputs": [[116, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_4_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_4_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv6_4", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[119, 0, 0], [120, 0, 0], [121, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv6_4", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[122, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_5_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_5_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv6_5", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[123, 0, 0], [124, 0, 0], [125, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv6_5", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[126, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_6_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv6_6_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv6_6", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "80", 
+        "num_group": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[127, 0, 0], [128, 0, 0], [129, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_conv6_6", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[130, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_add", 
+      "name": "sum4", 
+      "inputs": [[118, 0, 0], [131, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "down4_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "down4_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "down4", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(1, 1)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "num_group": "1", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[132, 0, 0], [133, 0, 0], [134, 0, 0]]
+    }, 
+    {
+      "op": "LeakyReLU", 
+      "name": "relu_down4", 
+      "attrs": {
+        "act_type": "leaky", 
+        "slope": "0.05"
+      }, 
+      "inputs": [[135, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "upsample_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(17, 17)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "1", 
+        "num_group": "1", 
+        "pad": "(8, 8)", 
+        "stride": "(3, 3)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "upsample_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(17, 17)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "1", 
+        "num_group": "1", 
+        "pad": "(8, 8)", 
+        "stride": "(3, 3)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Deconvolution", 
+      "name": "upsample", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(17, 17)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "1", 
+        "num_group": "1", 
+        "pad": "(8, 8)", 
+        "stride": "(3, 3)"
+      }, 
+      "inputs": [[136, 0, 0], [137, 0, 0], [138, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [
+    0, 
+    1, 
+    2, 
+    5, 
+    6, 
+    9, 
+    10, 
+    13, 
+    14, 
+    17, 
+    18, 
+    24, 
+    25, 
+    28, 
+    29, 
+    32, 
+    33, 
+    37, 
+    38, 
+    41, 
+    42, 
+    45, 
+    46, 
+    49, 
+    50, 
+    56, 
+    57, 
+    60, 
+    61, 
+    64, 
+    65, 
+    69, 
+    70, 
+    73, 
+    74, 
+    77, 
+    78, 
+    81, 
+    82, 
+    88, 
+    89, 
+    92, 
+    93, 
+    96, 
+    97, 
+    101, 
+    102, 
+    105, 
+    106, 
+    109, 
+    110, 
+    113, 
+    114, 
+    120, 
+    121, 
+    124, 
+    125, 
+    128, 
+    129, 
+    133, 
+    134, 
+    137, 
+    138
+  ], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    11, 
+    12, 
+    13, 
+    14, 
+    15, 
+    16, 
+    17, 
+    18, 
+    19, 
+    20, 
+    21, 
+    22, 
+    23, 
+    24, 
+    25, 
+    26, 
+    27, 
+    28, 
+    29, 
+    30, 
+    31, 
+    32, 
+    33, 
+    34, 
+    35, 
+    36, 
+    37, 
+    38, 
+    39, 
+    40, 
+    41, 
+    42, 
+    43, 
+    44, 
+    45, 
+    46, 
+    47, 
+    48, 
+    49, 
+    50, 
+    51, 
+    52, 
+    53, 
+    54, 
+    55, 
+    56, 
+    57, 
+    58, 
+    59, 
+    60, 
+    61, 
+    62, 
+    63, 
+    64, 
+    65, 
+    66, 
+    67, 
+    68, 
+    69, 
+    70, 
+    71, 
+    72, 
+    73, 
+    74, 
+    75, 
+    76, 
+    77, 
+    78, 
+    79, 
+    80, 
+    81, 
+    82, 
+    83, 
+    84, 
+    85, 
+    86, 
+    87, 
+    88, 
+    89, 
+    90, 
+    91, 
+    92, 
+    93, 
+    94, 
+    95, 
+    96, 
+    97, 
+    98, 
+    99, 
+    100, 
+    101, 
+    102, 
+    103, 
+    104, 
+    105, 
+    106, 
+    107, 
+    108, 
+    109, 
+    110, 
+    111, 
+    112, 
+    113, 
+    114, 
+    115, 
+    116, 
+    117, 
+    118, 
+    119, 
+    120, 
+    121, 
+    122, 
+    123, 
+    124, 
+    125, 
+    126, 
+    127, 
+    128, 
+    129, 
+    130, 
+    131, 
+    132, 
+    133, 
+    134, 
+    135, 
+    136, 
+    137, 
+    138, 
+    139, 
+    140
+  ], 
+  "heads": [[139, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 10300]}
+}
