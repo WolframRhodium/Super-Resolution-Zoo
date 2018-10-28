@@ -1,4 +1,4 @@
-Converted from **official** PyTorch model from [cszn/DnCNN](https://github.com/cszn/DnCNN/tree/5222842a8346f5206c85e413aa4459fd866f77d2/TrainingCodes/dncnn_pytorch).
+Converted from **official** [cszn/DnCNN](https://github.com/cszn/DnCNN/tree/5222842a8346f5206c85e413aa4459fd866f77d2/TrainingCodes/dncnn_pytorch).
 
 ---
 
