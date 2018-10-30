@@ -1,3 +1,5 @@
+**Note**: The output of the network has been modified to the filtered result, as opposed to the original model which outputs the residual.
+
 ```python
 ## Blind Gaussian Denoising
 
@@ -5,7 +7,7 @@
 args = dict(up_scale=1, is_rgb_model=False, pad=None, crop=None, pre_upscale=False, upscale_uv=False)
 
 # GD_Color_Blind (sigma = [0 55])
-args = dict(up_scale=1, is_rgb_model=True, pad=None, crop=None, pre_upscale=False, upscale_uv=False)
+args = dict(up_scale=1, is_rgb_model=True, pad=None, crop=None, pre_upscale=False)
 
 
 

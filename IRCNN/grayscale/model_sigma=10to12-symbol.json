@@ -1,0 +1,389 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution28_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution28_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution28", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[0, 0, 0], [1, 0, 0], [2, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu24", 
+      "inputs": [[3, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution29_weight", 
+      "attrs": {
+        "dilate": "(2, 2)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(2, 2)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution29_bias", 
+      "attrs": {
+        "dilate": "(2, 2)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(2, 2)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution29", 
+      "attrs": {
+        "dilate": "(2, 2)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(2, 2)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[4, 0, 0], [5, 0, 0], [6, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu25", 
+      "inputs": [[7, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution30_weight", 
+      "attrs": {
+        "dilate": "(3, 3)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(3, 3)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution30_bias", 
+      "attrs": {
+        "dilate": "(3, 3)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(3, 3)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution30", 
+      "attrs": {
+        "dilate": "(3, 3)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(3, 3)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[8, 0, 0], [9, 0, 0], [10, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu26", 
+      "inputs": [[11, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution31_weight", 
+      "attrs": {
+        "dilate": "(4, 4)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(4, 4)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution31_bias", 
+      "attrs": {
+        "dilate": "(4, 4)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(4, 4)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution31", 
+      "attrs": {
+        "dilate": "(4, 4)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(4, 4)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[12, 0, 0], [13, 0, 0], [14, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu27", 
+      "inputs": [[15, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution32_weight", 
+      "attrs": {
+        "dilate": "(3, 3)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(3, 3)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution32_bias", 
+      "attrs": {
+        "dilate": "(3, 3)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(3, 3)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution32", 
+      "attrs": {
+        "dilate": "(3, 3)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(3, 3)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[16, 0, 0], [17, 0, 0], [18, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu28", 
+      "inputs": [[19, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution33_weight", 
+      "attrs": {
+        "dilate": "(2, 2)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(2, 2)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution33_bias", 
+      "attrs": {
+        "dilate": "(2, 2)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(2, 2)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution33", 
+      "attrs": {
+        "dilate": "(2, 2)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "64", 
+        "pad": "(2, 2)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[20, 0, 0], [21, 0, 0], [22, 0, 0]]
+    }, 
+    {
+      "op": "relu", 
+      "name": "relu29", 
+      "inputs": [[23, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution34_weight", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution34_bias", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution34", 
+      "attrs": {
+        "dilate": "(1, 1)", 
+        "kernel": "(3, 3)", 
+        "layout": "NCHW", 
+        "no_bias": "False", 
+        "num_filter": "1", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[24, 0, 0], [25, 0, 0], [26, 0, 0]]
+    }, 
+    {
+      "op": "broadcast_sub", 
+      "name": "broadcast_sub4", 
+      "inputs": [[0, 0, 0], [27, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [
+    0, 
+    1, 
+    2, 
+    5, 
+    6, 
+    9, 
+    10, 
+    13, 
+    14, 
+    17, 
+    18, 
+    21, 
+    22, 
+    25, 
+    26
+  ], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    11, 
+    12, 
+    13, 
+    14, 
+    15, 
+    16, 
+    17, 
+    18, 
+    19, 
+    20, 
+    21, 
+    22, 
+    23, 
+    24, 
+    25, 
+    26, 
+    27, 
+    28, 
+    29
+  ], 
+  "heads": [[28, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 10300]}
+}

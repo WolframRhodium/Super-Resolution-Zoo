@@ -1,3 +1,5 @@
+**Note**: The output of the network has been modified to the denoised result, as opposed to the original model which outputs noise.
+
 ```python
 ## Grayscale Gaussian Denoising with specific sigma
 
