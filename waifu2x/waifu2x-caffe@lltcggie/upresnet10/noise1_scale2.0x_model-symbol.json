@@ -265,8 +265,8 @@
       "op": "slice", 
       "name": "slice0", 
       "attrs": {
-        "begin": "(0, 0, 2, 2)", 
-        "end": "(0, 0, -2, -2)"
+        "begin": "(None, None, 2, 2)", 
+        "end": "(None, None, -2, -2)"
       }, 
       "inputs": [[5, 0, 0]]
     }, 
@@ -475,8 +475,8 @@
       "op": "slice", 
       "name": "slice1", 
       "attrs": {
-        "begin": "(0, 0, 2, 2)", 
-        "end": "(0, 0, -2, -2)"
+        "begin": "(None, None, 2, 2)", 
+        "end": "(None, None, -2, -2)"
       }, 
       "inputs": [[26, 0, 0]]
     }, 
@@ -685,8 +685,8 @@
       "op": "slice", 
       "name": "slice2", 
       "attrs": {
-        "begin": "(0, 0, 2, 2)", 
-        "end": "(0, 0, -2, -2)"
+        "begin": "(None, None, 2, 2)", 
+        "end": "(None, None, -2, -2)"
       }, 
       "inputs": [[47, 0, 0]]
     }, 
@@ -895,8 +895,8 @@
       "op": "slice", 
       "name": "slice3", 
       "attrs": {
-        "begin": "(0, 0, 2, 2)", 
-        "end": "(0, 0, -2, -2)"
+        "begin": "(None, None, 2, 2)", 
+        "end": "(None, None, -2, -2)"
       }, 
       "inputs": [[68, 0, 0]]
     }, 
@@ -1105,8 +1105,8 @@
       "op": "slice", 
       "name": "slice4", 
       "attrs": {
-        "begin": "(0, 0, 2, 2)", 
-        "end": "(0, 0, -2, -2)"
+        "begin": "(None, None, 2, 2)", 
+        "end": "(None, None, -2, -2)"
       }, 
       "inputs": [[89, 0, 0]]
     }, 
@@ -1173,8 +1173,8 @@
       "op": "slice", 
       "name": "slice5", 
       "attrs": {
-        "begin": "(0, 0, 11, 11)", 
-        "end": "(0, 0, -11, -11)"
+        "begin": "(None, None, 11, 11)", 
+        "end": "(None, None, -11, -11)"
       }, 
       "inputs": [[5, 0, 0]]
     }, 
