@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad0", 
+      "attrs": {
+        "mode": "edge", 
+        "pad_width": "(0, 0, 0, 0, 2, 2, 0, 0)"
+      }, 
+      "inputs": [[0, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "bicubic_2x_h_weight", 
+      "attrs": {
+        "kernel": "(8, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1", 
+        "num_group": "1", 
+        "pad": "(7, 0)", 
+        "stride": "(2, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Deconvolution", 
+      "name": "bicubic_2x_h", 
+      "attrs": {
+        "kernel": "(8, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1", 
+        "num_group": "1", 
+        "pad": "(7, 0)", 
+        "stride": "(2, 1)"
+      }, 
+      "inputs": [[1, 0, 0], [2, 0, 0]]
+    }, 
+    {
+      "op": "Pad", 
+      "name": "pad1", 
+      "attrs": {
+        "mode": "edge", 
+        "pad_width": "(0, 0, 0, 0, 0, 0, 2, 2)"
+      }, 
+      "inputs": [[3, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "bicubic_2x_w_weight", 
+      "attrs": {
+        "kernel": "(1, 8)", 
+        "no_bias": "True", 
+        "num_filter": "1", 
+        "num_group": "1", 
+        "pad": "(0, 7)", 
+        "stride": "(1, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Deconvolution", 
+      "name": "bicubic_2x_w", 
+      "attrs": {
+        "kernel": "(1, 8)", 
+        "no_bias": "True", 
+        "num_filter": "1", 
+        "num_group": "1", 
+        "pad": "(0, 7)", 
+        "stride": "(1, 2)"
+      }, 
+      "inputs": [[4, 0, 0], [5, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [0, 2, 5], 
+  "node_row_ptr": [0, 1, 2, 3, 4, 5, 6, 7], 
+  "heads": [[6, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 10300]}
+}

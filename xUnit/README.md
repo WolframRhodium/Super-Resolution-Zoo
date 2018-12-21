@@ -3,7 +3,7 @@ Converted from **official** [kligvasser/xUnit](https://github.com/kligvasser/xUn
 ---
 
 ### Reference
-**[1] Kligvasser, I., Shaham, T. R., & Michaeli, T. (2018). xUnit: Learning a Spatial Activation Function for Efficient Image Restoration. In proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. [[PDF]](https://tomer.net.technion.ac.il/files/2018/03/xUnit_CameraReady.pdf) [[Code]](https://github.com/kligvasser/xUnit)**
+**[1] Kligvasser, I., Shaham, T. R., & Michaeli, T. (2018). [xUnit: Learning a Spatial Activation Function for Efficient Image Restoration](https://ieeexplore.ieee.org/document/8578356/). In the IEEE/CVF Conference on Computer Vision and Pattern Recognition. [[PDF]](https://tomer.net.technion.ac.il/files/2018/03/xUnit_CameraReady.pdf) [[Code]](https://github.com/kligvasser/xUnit)**
 
 [2] Zhang, K., Zuo, W., Chen, Y., Meng, D., & Zhang, L. (2017). [Beyond a Gaussian Denoiser: Residual Learning of Deep CNN for Image Denoising](https://ieeexplore.ieee.org/document/7839189/). IEEE Transactions on Image Processing, 26(7), 3142-3155. [[PDF]](https://arxiv.org/pdf/1608.03981) [[Code]](https://github.com/cszn/DnCNN)
 
