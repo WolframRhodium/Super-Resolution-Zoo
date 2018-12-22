@@ -101,7 +101,7 @@ def resize_weight(scale=2, kernel=None, downsample=False):
         weight_1d[kernel_width//2:] = func([(i / scale) for i in range(kernel_width // 2 + 1)])
         weight_1d[:kernel_width//2] = weight_1d[:kernel_width//2:-1] # mirror
 
-    # kernel normalization:
+    # kernel normalization
     for i in range(scale):
         weight_1d[i::scale] /= weight_1d[i::scale].sum()
 

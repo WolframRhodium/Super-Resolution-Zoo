@@ -6,18 +6,24 @@
       "inputs": []
     }, 
     {
-      "op": "reverse", 
-      "name": "reverse_channels_for_caffe_model", 
-      "attrs": {"axis": "1"}, 
+      "op": "Pad", 
+      "name": "pad0", 
+      "attrs": {
+        "mode": "reflect", 
+        "pad_width": "(0, 0, 0, 0, 7, 7, 7, 7)"
+      }, 
       "inputs": [[0, 0, 0]]
     }, 
     {
       "op": "null", 
       "name": "conv1_layer_weight", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "16", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -27,9 +33,12 @@
       "op": "null", 
       "name": "conv1_layer_bias", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "16", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -39,9 +48,12 @@
       "op": "Convolution", 
       "name": "conv1_layer", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "16", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -60,9 +72,12 @@
       "op": "null", 
       "name": "conv2_layer_weight", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "32", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -72,9 +87,12 @@
       "op": "null", 
       "name": "conv2_layer_bias", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "32", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -84,9 +102,12 @@
       "op": "Convolution", 
       "name": "conv2_layer", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "32", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -105,9 +126,12 @@
       "op": "null", 
       "name": "conv3_layer_weight", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -117,9 +141,12 @@
       "op": "null", 
       "name": "conv3_layer_bias", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -129,9 +156,12 @@
       "op": "Convolution", 
       "name": "conv3_layer", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "64", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -150,9 +180,12 @@
       "op": "null", 
       "name": "conv4_layer_weight", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "128", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -162,9 +195,12 @@
       "op": "null", 
       "name": "conv4_layer_bias", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "128", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -174,9 +210,12 @@
       "op": "Convolution", 
       "name": "conv4_layer", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "128", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -195,9 +234,12 @@
       "op": "null", 
       "name": "conv5_layer_weight", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "128", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -207,9 +249,12 @@
       "op": "null", 
       "name": "conv5_layer_bias", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "128", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -219,9 +264,12 @@
       "op": "Convolution", 
       "name": "conv5_layer", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "128", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -240,9 +288,12 @@
       "op": "null", 
       "name": "conv6_layer_weight", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "256", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -252,9 +303,12 @@
       "op": "null", 
       "name": "conv6_layer_bias", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "256", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -264,9 +318,12 @@
       "op": "Convolution", 
       "name": "conv6_layer", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(3, 3)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "256", 
+        "num_group": "1", 
         "pad": "(0, 0)", 
         "stride": "(1, 1)"
       }, 
@@ -285,9 +342,12 @@
       "op": "null", 
       "name": "conv7_layer_weight", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(4, 4)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "3", 
+        "num_group": "1", 
         "pad": "(3, 3)", 
         "stride": "(2, 2)"
       }, 
@@ -297,9 +357,12 @@
       "op": "null", 
       "name": "conv7_layer_bias", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(4, 4)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "3", 
+        "num_group": "1", 
         "pad": "(3, 3)", 
         "stride": "(2, 2)"
       }, 
@@ -309,9 +372,12 @@
       "op": "Deconvolution", 
       "name": "conv7_layer", 
       "attrs": {
+        "dilate": "(1, 1)", 
         "kernel": "(4, 4)", 
+        "layout": "NCHW", 
         "no_bias": "False", 
         "num_filter": "3", 
+        "num_group": "1", 
         "pad": "(3, 3)", 
         "stride": "(2, 2)"
       }, 

@@ -6,9 +6,12 @@
       "inputs": []
     }, 
     {
-      "op": "reverse", 
-      "name": "reverse_channels_for_caffe_model", 
-      "attrs": {"axis": "1"}, 
+      "op": "Pad", 
+      "name": "pad0", 
+      "attrs": {
+        "mode": "reflect", 
+        "pad_width": "(0, 0, 0, 0, 13, 13, 13, 13)"
+      }, 
       "inputs": [[0, 0, 0]]
     }, 
     {
@@ -253,7 +256,7 @@
     {
       "op": "Reshape", 
       "name": "reshape0", 
-      "attrs": {"shape": "(1, -1, 1, 1)"}, 
+      "attrs": {"shape": "(0, 0, 1, 1)"}, 
       "inputs": [[22, 0, 0]]
     }, 
     {
@@ -263,10 +266,10 @@
     }, 
     {
       "op": "slice", 
-      "name": "slice0", 
+      "name": "_res1_crop", 
       "attrs": {
-        "begin": "(0, 0, 2, 2)", 
-        "end": "(0, 0, -2, -2)"
+        "begin": "(None, None, 2, 2)", 
+        "end": "(None, None, -2, -2)"
       }, 
       "inputs": [[5, 0, 0]]
     }, 
@@ -463,7 +466,7 @@
     {
       "op": "Reshape", 
       "name": "reshape1", 
-      "attrs": {"shape": "(1, -1, 1, 1)"}, 
+      "attrs": {"shape": "(0, 0, 1, 1)"}, 
       "inputs": [[43, 0, 0]]
     }, 
     {
@@ -473,10 +476,10 @@
     }, 
     {
       "op": "slice", 
-      "name": "slice1", 
+      "name": "_res2_crop", 
       "attrs": {
-        "begin": "(0, 0, 2, 2)", 
-        "end": "(0, 0, -2, -2)"
+        "begin": "(None, None, 2, 2)", 
+        "end": "(None, None, -2, -2)"
       }, 
       "inputs": [[26, 0, 0]]
     }, 
@@ -673,7 +676,7 @@
     {
       "op": "Reshape", 
       "name": "reshape2", 
-      "attrs": {"shape": "(1, -1, 1, 1)"}, 
+      "attrs": {"shape": "(0, 0, 1, 1)"}, 
       "inputs": [[64, 0, 0]]
     }, 
     {
@@ -683,10 +686,10 @@
     }, 
     {
       "op": "slice", 
-      "name": "slice2", 
+      "name": "_res3_crop", 
       "attrs": {
-        "begin": "(0, 0, 2, 2)", 
-        "end": "(0, 0, -2, -2)"
+        "begin": "(None, None, 2, 2)", 
+        "end": "(None, None, -2, -2)"
       }, 
       "inputs": [[47, 0, 0]]
     }, 
@@ -883,7 +886,7 @@
     {
       "op": "Reshape", 
       "name": "reshape3", 
-      "attrs": {"shape": "(1, -1, 1, 1)"}, 
+      "attrs": {"shape": "(0, 0, 1, 1)"}, 
       "inputs": [[85, 0, 0]]
     }, 
     {
@@ -893,10 +896,10 @@
     }, 
     {
       "op": "slice", 
-      "name": "slice3", 
+      "name": "_res4_crop", 
       "attrs": {
-        "begin": "(0, 0, 2, 2)", 
-        "end": "(0, 0, -2, -2)"
+        "begin": "(None, None, 2, 2)", 
+        "end": "(None, None, -2, -2)"
       }, 
       "inputs": [[68, 0, 0]]
     }, 
@@ -1093,7 +1096,7 @@
     {
       "op": "Reshape", 
       "name": "reshape4", 
-      "attrs": {"shape": "(1, -1, 1, 1)"}, 
+      "attrs": {"shape": "(0, 0, 1, 1)"}, 
       "inputs": [[106, 0, 0]]
     }, 
     {
@@ -1103,10 +1106,10 @@
     }, 
     {
       "op": "slice", 
-      "name": "slice4", 
+      "name": "_res5_crop", 
       "attrs": {
-        "begin": "(0, 0, 2, 2)", 
-        "end": "(0, 0, -2, -2)"
+        "begin": "(None, None, 2, 2)", 
+        "end": "(None, None, -2, -2)"
       }, 
       "inputs": [[89, 0, 0]]
     }, 
@@ -1171,10 +1174,10 @@
     }, 
     {
       "op": "slice", 
-      "name": "slice5", 
+      "name": "_crop", 
       "attrs": {
-        "begin": "(0, 0, 11, 11)", 
-        "end": "(0, 0, -11, -11)"
+        "begin": "(None, None, 11, 11)", 
+        "end": "(None, None, -11, -11)"
       }, 
       "inputs": [[5, 0, 0]]
     }, 

@@ -52,10 +52,10 @@ else:
 
     data = mx.symbol.Variable('data')
     upsample_h = mx.symbol.pad(data, mode='edge', pad_width=(0, 0, 0, 0, 2 * taps - 1, 2 * taps, 0, 0))
-    upsample_h = mx.symbol.Deconvolution(upsample_h, kernel=(width, 1), stride=(scale, 1), pad=(pad, 0), 
+    upsample_h = mx.symbol.Convolution(upsample_h, kernel=(width, 1), stride=(scale, 1), pad=(pad, 0), 
         num_filter=channels, num_group=channels, no_bias=True, name='{}_h'.format(name))
     upsample_w = mx.symbol.pad(upsample_h, mode='edge', pad_width=(0, 0, 0, 0, 0, 0, 2 * taps - 1, 2 * taps - 1))
-    upsample_w = mx.symbol.Deconvolution(upsample_w, kernel=(1, width), stride=(1, scale), pad=(0, pad), 
+    upsample_w = mx.symbol.Convolution(upsample_w, kernel=(1, width), stride=(1, scale), pad=(0, pad), 
         num_filter=channels, num_group=channels, no_bias=True, name='{}_w'.format(name))
 
     net = mx.gluon.SymbolBlock(outputs=upsample_w, inputs=data)
